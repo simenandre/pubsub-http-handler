@@ -5,7 +5,7 @@
   "main": "dist/src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cobraz/pubsub-handler"
+    "url": "https://github.com/cobraz/pubsub-http-handler"
   },
   "files": [
     "dist/src"
