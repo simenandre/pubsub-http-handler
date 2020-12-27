@@ -1,0 +1,50 @@
+{
+  "name": "pubsub-http-handler",
+  "version": "1.0.0",
+  "description": "Handle Google PubSub requests with ease",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cobraz/pubsub-handler"
+  },
+  "author": "Simen A. W. Olsen <cobraz@cobraz.no>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint 'src/**/*.ts' --fix",
+    "generate:docs": "typedoc --mode file --readme none --plugin typedoc-plugin-markdown --hideSources --out docs src",
+    "test": "jest --coverage src"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.16",
+    "@typescript-eslint/eslint-plugin": "4.8.2",
+    "@typescript-eslint/parser": "4.8.2",
+    "eslint": "7.14.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-import": "2.22.1",
+    "husky": "^4.3.0",
+    "jest": "26.6.3",
+    "json-schema-faker": "^0.5.0-rcv.32",
+    "lint-staged": "10.5.2",
+    "prettier": "2.2.1",
+    "ts-jest": "^26.4.4",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.1.1",
+    "typescript": "4.1.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.12.7",
+    "fastify": "^3.9.2"
+  }
+}
