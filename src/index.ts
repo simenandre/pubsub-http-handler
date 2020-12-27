@@ -1,9 +1,5 @@
 import { Static, Type } from '@sinclair/typebox';
-import Fastify, {
-  FastifyInstance,
-  FastifyLoggerOptions,
-  FastifyServerOptions,
-} from 'fastify';
+import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 
 export const PubSubMessage = Type.Object({
   message: Type.Object({
