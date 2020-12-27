@@ -1,6 +1,6 @@
 {
   "name": "pubsub-http-handler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Handle Google PubSub requests with ease",
   "main": "dist/src/index.js",
   "repository": {
