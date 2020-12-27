@@ -2,11 +2,14 @@
   "name": "pubsub-http-handler",
   "version": "1.0.0",
   "description": "Handle Google PubSub requests with ease",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/cobraz/pubsub-handler"
   },
+  "files": [
+    "dist/src"
+  ],
   "author": "Simen A. W. Olsen <cobraz@cobraz.no>",
   "license": "Apache-2.0",
   "scripts": {
