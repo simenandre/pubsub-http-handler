@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v1.0.2...v2.0.0) (2021-08-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add support for Google Cloud Functions and fastify-plugin (#9)
+
+### Features
+
+* Add support for Google Cloud Functions and fastify-plugin ([#9](https://www.github.com/cobraz/pubsub-http-handler/issues/9)) ([18b1d32](https://www.github.com/cobraz/pubsub-http-handler/commit/18b1d32906f4973e9b64e04b877faaeecefe4192))
+
 ## [1.0.2](https://github.com/cobraz/pubsub-http-handler/compare/v1.0.1...v1.0.2) (2020-12-27)
 
 
