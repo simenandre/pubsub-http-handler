@@ -16,12 +16,11 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: npm
+        cache: yarn
     - run: yarn install
     - run: yarn build
     - run: yarn lint
-    # TODO: Add test to workflow
-    # - run: yarn test --passWithNoTests
-    #   env:
-    #     CI: true
-    # - run: npx codecov
+    - run: yarn test
+      env:
+        CI: true
+    - run: npx codecov
