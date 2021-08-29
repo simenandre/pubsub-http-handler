@@ -8,6 +8,15 @@ module.exports = {
     '.*/dist/.*',
     '.*dist.*',
   ],
+  collectCoverageFrom: ['src/**/{!(fixtures),}.ts'],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: -10,
+    },
+  },
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.json',

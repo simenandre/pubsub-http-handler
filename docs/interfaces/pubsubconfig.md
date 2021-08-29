@@ -1,4 +1,4 @@
-**[pubsub-handler](../README.md)**
+**[pubsub-http-handler](../README.md)**
 
 > [Globals](../README.md) / PubSubConfig
 
@@ -12,27 +12,17 @@
 
 ### Properties
 
-* [address](pubsubconfig.md#address)
-* [fastifyConfig](pubsubconfig.md#fastifyconfig)
+* [handler](pubsubconfig.md#handler)
 * [parseJson](pubsubconfig.md#parsejson)
 * [path](pubsubconfig.md#path)
-* [port](pubsubconfig.md#port)
 
 ## Properties
 
-### address
+### handler
 
-• `Optional` **address**: string
+•  **handler**: [PubSubHandler](../README.md#pubsubhandler)
 
-**`default`** 0.0.0.0
-
-___
-
-### fastifyConfig
-
-• `Optional` **fastifyConfig**: FastifyServerOptions
-
-Read more here: https://www.fastify.io/docs/latest/Server/
+Handler
 
 ___
 
@@ -53,13 +43,3 @@ ___
 Use this to set a different path
 
 **`default`** /
-
-___
-
-### port
-
-• `Optional` **port**: number
-
-Will automatically pick up PORT environment variable.
-
-**`default`** 8000

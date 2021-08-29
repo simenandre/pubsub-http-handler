@@ -1,4 +1,4 @@
-**[pubsub-handler](../README.md)**
+**[pubsub-http-handler](../README.md)**
 
 > [Globals](../README.md) / PubSubHandlerResponse
 
