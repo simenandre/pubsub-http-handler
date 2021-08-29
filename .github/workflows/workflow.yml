@@ -31,6 +31,7 @@ jobs:
       - run: yarn install
       - run: yarn run test
       - run: yarn run build
+      - uses: codecov/codecov-action@v2
 
       - if: ${{ steps.release.outputs.release_created }}
         run: yarn publish

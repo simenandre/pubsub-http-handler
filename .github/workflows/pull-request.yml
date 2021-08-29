@@ -23,4 +23,4 @@ jobs:
     - run: yarn test
       env:
         CI: true
-    - run: npx codecov
+    - uses: codecov/codecov-action@v2
