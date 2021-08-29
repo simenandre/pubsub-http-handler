@@ -1,16 +1,15 @@
 # PubSub HTTP Handler
 
-![Build & Deploy][build-badge]
-[![Total alerts][lgtm-badge]][lgtm-alerts]
+![Build & Deploy][build-badge] [![Total alerts][lgtm-badge]][lgtm-alerts]
 [![LGTM Grade][lgtm-grade]][lgtm-alerts]
 [![Maintainability][codeclimate-badge]][codeclimate]
 [![npm bundle size][bundle-size]][npm]
 
 ![PubSub HTTP Handler](.github/header.jpg)
 
-PubSub HTTP Handler is a simple Typescript/Javascript package that solves serving an
-HTTP endpoint that can consume PubSub messages. It is intended to use with
-Google Cloud Functions or Google Cloud Run.
+PubSub HTTP Handler is a simple Typescript/Javascript package that solves
+serving an HTTP endpoint that can consume PubSub messages. It is intended to use
+with Google Cloud Functions or Google Cloud Run.
 
 This package was built so that when creating microservices that subscribes to a
 PubSub-topic, we don't have to implement a server or validate the request.
@@ -26,7 +25,7 @@ The package utilizes [Fastify][] to serve HTTP.
 ## Example
 
 ```typescript
-import { pubSubServer, PubSubHandler } from 'pubsub-http-handler';
+import { createPubSubServer, PubSubHandler } from 'pubsub-http-handler';
 
 interface MyHandler {
   hello: string;
@@ -37,15 +36,21 @@ const server = async () => {
   const handler: PubSubHandler<MyHandler> = ({ message, data }) => {
     // `message` contains attributes, data (as string), messageId
     // `data` contains a base64 decoded JSON serialized object (type is MyHandler in the example)
-
-    ...
+    // ...
   };
 
-  await pubSubServer(handler);
+  const { listen } = await createPubSubServer(handler);
+  await listen();
 };
 ```
 
-Read more about [configuration here][configuration] or check out the [API documentation][docs]
+We also support `fastify-plugin` and `cloud-functions`. See [more examples in
+the `examples/` folder][examples].
+
+Read more about [configuration here][configuration] or check out the [API
+documentation][docs]
+
+[examples]: ./examples
 
 ## Contributing
 
@@ -69,6 +74,6 @@ We love contributions! 🙏 Bug reports and pull requests are welcome on
   https://img.shields.io/bundlephobia/min/@cobraz/pubsub-http-handler?style=flat-square
 [semantic-release-badge]:
   https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
-[Fastify]: https://www.fastify.io/
+[fastify]: https://www.fastify.io/
 [configuration]: ./docs/interfaces/pubsubconfig.md
 [docs]: ./docs/

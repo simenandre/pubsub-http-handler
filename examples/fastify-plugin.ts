@@ -1,4 +1,5 @@
-import { PubSubHandler, createPubSubServer } from '../src';
+import Fastify from 'fastify';
+import { pubSubFastifyPlugin, PubSubHandler } from '../src';
 
 interface HandlerArguments {
   name: string;
@@ -8,7 +9,9 @@ interface HandlerArguments {
   bookingId: string;
 }
 
-const server = async () => {
+const server = () => {
+  const fastify = Fastify();
+
   const handler: PubSubHandler<HandlerArguments> = ({ data }) => {
     const { name, party, bookingId } = data;
     console.log(
@@ -16,7 +19,9 @@ const server = async () => {
     );
   };
 
-  await createPubSubServer(handler);
+  fastify.register(pubSubFastifyPlugin, { handler });
+
+  fastify.server.listen(8000);
 };
 
-server().then(console.log).catch(console.error);
+server();
