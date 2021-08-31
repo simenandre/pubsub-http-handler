@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.0.0...v2.0.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* include express declarations for Cloud Functions users ([04a69f5](https://www.github.com/cobraz/pubsub-http-handler/commit/04a69f56cd52e2da0cdac7b28a02a1867e4c4c9c))
+
 ## [2.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v1.0.2...v2.0.0) (2021-08-29)
 
 
