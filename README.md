@@ -54,11 +54,12 @@ documentation][docs]
 
 ## Options
 
-- `onError` (function). Used to ensure that the function does not throw.
-  **Note:** When applied, the function will return 204 regardless.
+- `onError` (function, default is undefined). Used to ensure that the function
+  does not throw. **Note:** When applied, the function will return `204`
+  regardless.
 
-- `parseJson` (default is `true`). When set to true, uses `JSON.parse` to parse
-  the data sent through PubSub.
+- `parseJson` (boolean, default is `true`). When set to true, uses `JSON.parse`
+  to parse the data sent through PubSub.
 
 ## Contributing
 
