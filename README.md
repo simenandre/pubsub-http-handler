@@ -3,7 +3,6 @@
 ![Build & Deploy][build-badge] [![Total alerts][lgtm-badge]][lgtm-alerts]
 [![LGTM Grade][lgtm-grade]][lgtm-alerts]
 [![Maintainability][codeclimate-badge]][codeclimate]
-[![npm bundle size][bundle-size]][npm]
 
 ![PubSub HTTP Handler](.github/header.jpg)
 
@@ -64,7 +63,7 @@ documentation][docs]
 ## Contributing
 
 We love contributions! 🙏 Bug reports and pull requests are welcome on
-[GitHub][github].
+[GitHub].
 
 [banner]: ./assets/banner.jpg
 [npm]: https://www.npmjs.com/package/pubsub-http-handler
@@ -79,10 +78,9 @@ We love contributions! 🙏 Bug reports and pull requests are welcome on
 [lgtm-alerts]: https://lgtm.com/projects/g/cobraz/pubsub-http-handler/alerts/
 [lgtm-grade]:
   https://img.shields.io/lgtm/grade/javascript/github/cobraz/pubsub-http-handler?style=flat-square
-[bundle-size]:
-  https://img.shields.io/bundlephobia/min/@cobraz/pubsub-http-handler?style=flat-square
 [semantic-release-badge]:
   https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
 [fastify]: https://www.fastify.io/
 [configuration]: ./docs/interfaces/pubsubconfig.md
 [docs]: ./docs/
+[github]: https://github.com/cobraz/pubsub-http-handler/issues
