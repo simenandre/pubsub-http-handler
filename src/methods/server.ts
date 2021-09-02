@@ -33,13 +33,14 @@ export function createPubSubServer<T = unknown>(
     address = '0.0.0.0',
     parseJson = true,
     path = '/',
+    onError,
   } = config;
 
   const fastify = Fastify({
     ...fastifyConfig,
   });
 
-  fastify.register(pubSubFastifyPlugin, { handler, parseJson, path });
+  fastify.register(pubSubFastifyPlugin, { handler, parseJson, path, onError });
 
   return {
     async listen() {

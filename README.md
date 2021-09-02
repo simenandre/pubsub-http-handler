@@ -52,6 +52,14 @@ documentation][docs]
 
 [examples]: ./examples
 
+## Options
+
+- `onError` (function). Used to ensure that the function does not throw.
+  **Note:** When applied, the function will return 200 regardless.
+
+- `parseJson` (default is `true`). When set to true, uses `JSON.parse` to parse
+  the data sent through PubSub.
+
 ## Contributing
 
 We love contributions! 🙏 Bug reports and pull requests are welcome on

@@ -6,6 +6,15 @@ export interface PubSubConfig {
    */
   handler: PubSubHandler;
   /**
+   * OnError Handler
+   *
+   * When this is set, errors will not be
+   * thrown.
+   */
+  onError?: OnErrorHandler;
+  /**
+   * This will run JSON.parse on request data
+   *
    * **Tip**: `false` when sending strings
    * @default true
    */
@@ -41,3 +50,5 @@ export type PubSubHandler<T = any> = (args: {
   data?: T;
   context?: unknown;
 }) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
+
+export type OnErrorHandler = (error: unknown) => Promise<void>;
