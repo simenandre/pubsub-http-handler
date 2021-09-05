@@ -53,17 +53,16 @@ documentation][docs]
 
 ## Options
 
-- `onError` (function, default is undefined). Used to ensure that the function
-  does not throw. **Note:** When applied, the function will return `204`
-  regardless.
+- `onError` (function, default is undefined). Use to ensure that the function
+  doesn't throw. **Warning:** Using this option will make the function return
+  `204` regardless.
 
 - `parseJson` (boolean, default is `true`). When set to true, uses `JSON.parse`
   to parse the data sent through PubSub.
 
 ## Contributing
 
-We love contributions! 🙏 Bug reports and pull requests are welcome on
-[GitHub].
+We love contributions! 🙏 Bug reports and pull requests are welcome on [GitHub].
 
 [banner]: ./assets/banner.jpg
 [npm]: https://www.npmjs.com/package/pubsub-http-handler

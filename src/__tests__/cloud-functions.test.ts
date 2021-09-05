@@ -20,7 +20,8 @@ describe('cloud functions', () => {
       context: JSON.parse(JSON.stringify(payload)),
     });
   });
-  it('should return onError on throw', async () => {
+
+  it('should run onError when thrown', async () => {
     const payload = createPubSubRequest('forward me');
     const handle = () => {
       throw new Error('error');
@@ -36,7 +37,7 @@ describe('cloud functions', () => {
     expect(onError).toHaveBeenCalledWith(new Error('error'));
   });
 
-  it('should not return onError on throw', async () => {
+  it('should throw when onError is undefined', async () => {
     const payload = createPubSubRequest('forward me');
     const handle = () => {
       throw new Error('error');
@@ -47,6 +48,6 @@ describe('cloud functions', () => {
     await fun(
       { body: payload } as any,
       ({ status: () => ({ send }) } as unknown) as any,
-    ).catch(e => expect(e).toEqual('error'));
+    ).catch(e => expect(e.message).toBe('error'));
   });
 });

@@ -15,17 +15,20 @@ export function createPubSubCloudFunctions<T = unknown>(
 ): CloudFunctionFun {
   const { parseJson, onError } = options;
   return async (req, res): Promise<void> => {
-    await handlePubSubMessage({
-      message: req.body.message,
-      handler,
-      context: req.body,
-      parseJson,
-    }).catch(error => {
-      if (onError) {
-        return onError(error);
-      }
-    });
+    try {
+      await handlePubSubMessage({
+        message: req.body.message,
+        handler,
+        context: req.body,
+        parseJson,
+      });
 
-    res.status(200).send();
+      res.status(200).send();
+    } catch (error) {
+      if (onError) {
+        await onError(error);
+        res.status(200).send();
+      } else throw error;
+    }
   };
 }

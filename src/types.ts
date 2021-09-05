@@ -51,4 +51,4 @@ export type PubSubHandler<T = any> = (args: {
   context?: unknown;
 }) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
 
-export type OnErrorHandler = (error: unknown) => Promise<void>;
+export type OnErrorHandler = (error: unknown) => void | Promise<void>;
