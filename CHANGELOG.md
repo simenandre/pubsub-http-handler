@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.0.1...v2.1.0) (2021-09-05)
+
+
+### Features
+
+* Add `onError` handle ([#18](https://www.github.com/cobraz/pubsub-http-handler/issues/18)) ([b765f8d](https://www.github.com/cobraz/pubsub-http-handler/commit/b765f8ddf5a18daca736185e93600d2a9a7b0bfd))
+* Add improvements to [#18](https://www.github.com/cobraz/pubsub-http-handler/issues/18) ([edac0cb](https://www.github.com/cobraz/pubsub-http-handler/commit/edac0cb34b9b6785839ba74c43887fe7861a9d42))
+
 ### [2.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.0.0...v2.0.1) (2021-08-31)
 
 
