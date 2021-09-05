@@ -52,4 +52,41 @@ describe('fastify-plugin', () => {
       context: JSON.parse(JSON.stringify(payload)),
     });
   });
+
+  it('should return onError on throw', async () => {
+    const handler = () => {
+      throw new Error('error');
+    };
+    const onError = jest.fn();
+    const payload = createPubSubRequest('forward me');
+
+    app.register(pubSubFastifyPlugin, { handler, onError });
+
+    await app.inject({
+      method: 'POST',
+      url: '/',
+      payload,
+    });
+
+    expect(onError).toHaveBeenCalledWith(new Error('error'));
+  });
+
+  it('should not return onError on throw', async () => {
+    const handler = () => {
+      throw new Error('error');
+    };
+    const payload = createPubSubRequest('forward me');
+
+    app.register(pubSubFastifyPlugin, { handler });
+
+    const res = await app.inject({
+      method: 'POST',
+      url: '/',
+      payload,
+    });
+
+    expect(res.payload).toMatchInlineSnapshot(
+      `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"error\\"}"`,
+    );
+  });
 });

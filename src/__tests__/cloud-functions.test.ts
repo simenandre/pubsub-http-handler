@@ -20,4 +20,33 @@ describe('cloud functions', () => {
       context: JSON.parse(JSON.stringify(payload)),
     });
   });
+  it('should return onError on throw', async () => {
+    const payload = createPubSubRequest('forward me');
+    const handle = () => {
+      throw new Error('error');
+    };
+    const onError = jest.fn();
+    const send = jest.fn();
+    const fun = await createPubSubCloudFunctions(handle, { onError });
+    await fun(
+      { body: payload } as any,
+      ({ status: () => ({ send }) } as unknown) as any,
+    );
+
+    expect(onError).toHaveBeenCalledWith(new Error('error'));
+  });
+
+  it('should not return onError on throw', async () => {
+    const payload = createPubSubRequest('forward me');
+    const handle = () => {
+      throw new Error('error');
+    };
+    const send = jest.fn();
+    const fun = await createPubSubCloudFunctions(handle);
+
+    await fun(
+      { body: payload } as any,
+      ({ status: () => ({ send }) } as unknown) as any,
+    ).catch(e => expect(e).toEqual('error'));
+  });
 });
