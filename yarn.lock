@@ -521,6 +521,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@tsconfig/node14@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node14/-/node14-1.0.1.tgz#95f2d167ffb9b8d2068b0b235302fafd4df711f2"
+  integrity sha512-509r2+yARFfHHE7T6Puu2jjkoycftovhXRqW328PDXTVGKihlb1P8Z9mMZH04ebyajfRY7dedfGynlrFHJUQCg==
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.12.tgz#4d8e9e51eb265552a7e4f1ff2219ab6133bdfb2d"
@@ -621,6 +626,18 @@
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
+
+"@types/json-schema-faker@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@types/json-schema-faker/-/json-schema-faker-0.5.1.tgz#6558d9704ab8b08c982846a7bdb73a41576ae8e1"
+  integrity sha512-gXkZKNeQEMLFH2aYVG+ZSxdrLN2MCi0V6CoB3RAcUSz1BTfXntCOpTDdrfx+rTQ3x2sctFjM3gGauqDVxDXI7g==
+  dependencies:
+    "@types/json-schema" "*"
+
+"@types/json-schema@*":
+  version "7.0.9"
+  resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
+  integrity sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ==
 
 "@types/json-schema@^7.0.3":
   version "7.0.6"
