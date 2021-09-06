@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.1.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.0...v2.1.1) (2021-09-06)
+
+
+### Bug Fixes
+
+* change engine to node@14.x ([#24](https://www.github.com/cobraz/pubsub-http-handler/issues/24)) ([5e07e0f](https://www.github.com/cobraz/pubsub-http-handler/commit/5e07e0f94d52611389826ea2ad3a09829c56bff4))
+
 ## [2.1.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.0.1...v2.1.0) (2021-09-05)
 
 
