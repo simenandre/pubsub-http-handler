@@ -28,6 +28,18 @@
       "prettier --write"
     ]
   },
+  "keywords": [
+    "google",
+    "app",
+    "cloud",
+    "cloud-run",
+    "run",
+    "pubsub",
+    "handler",
+    "fastify",
+    "fastify-plugin",
+    "cloud-functions"
+  ],
   "dependencies": {
     "@sinclair/typebox": "^0.12.7",
     "@types/express": "^4.17.13",
