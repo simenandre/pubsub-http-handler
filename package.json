@@ -5,12 +5,12 @@
   "repository": "github:cobraz/pubsub-http-handler",
   "license": "Apache-2.0",
   "author": "Simen A. W. Olsen <cobraz@cobraz.no>",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=14.15"
   },
   "files": [
-    "dist/src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
