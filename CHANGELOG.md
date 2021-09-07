@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.1.2](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.1...v2.1.2) (2021-09-07)
+
+
+### Bug Fixes
+
+* To strict validation. ([#31](https://www.github.com/cobraz/pubsub-http-handler/issues/31)) ([34fbcd6](https://www.github.com/cobraz/pubsub-http-handler/commit/34fbcd6049c3b4dfead0d61f4153272e7aef6b3d))
+
 ### [2.1.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.0...v2.1.1) (2021-09-06)
 
 
