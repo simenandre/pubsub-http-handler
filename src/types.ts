@@ -27,7 +27,7 @@ export interface PubSubConfig {
 }
 
 export const PubSubMessage = Type.Object({
-  attributes: Type.Dict(Type.String()),
+  attributes: Type.Optional(Type.Dict(Type.String())),
   data: Type.String(),
   messageId: Type.Optional(Type.String()),
 });
