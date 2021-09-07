@@ -89,4 +89,25 @@ describe('fastify-plugin', () => {
       `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"error\\"}"`,
     );
   });
+
+  it('should not throw if request is missing attributes', async () => {
+    const handler = jest.fn();
+    const payload = {
+      message: {
+        data: 'ImZvcndhcmQgbWUi',
+        messageId: 'in dolor Ut',
+      },
+      subscription: 'mollit sint',
+    };
+
+    app.register(pubSubFastifyPlugin, { handler });
+
+    const res = await app.inject({
+      method: 'POST',
+      url: '/',
+      payload,
+    });
+
+    expect(res.statusCode).toBe(204);
+  });
 });

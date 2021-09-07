@@ -14,6 +14,7 @@ describe('index', () => {
                 "type": "string",
               },
               "kind": Symbol(DictKind),
+              "modifier": Symbol(OptionalModifier),
               "type": "object",
             },
             "data": Object {
@@ -27,7 +28,6 @@ describe('index', () => {
             },
           },
           "required": Array [
-            "attributes",
             "data",
           ],
           "type": "object",
@@ -44,6 +44,7 @@ describe('index', () => {
                     "type": "string",
                   },
                   "kind": Symbol(DictKind),
+                  "modifier": Symbol(OptionalModifier),
                   "type": "object",
                 },
                 "data": Object {
@@ -57,7 +58,6 @@ describe('index', () => {
                 },
               },
               "required": Array [
-                "attributes",
                 "data",
               ],
               "type": "object",
