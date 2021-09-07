@@ -1,6 +1,6 @@
 {
   "name": "pubsub-http-handler",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Handle Google PubSub requests with ease",
   "repository": "github:cobraz/pubsub-http-handler",
   "license": "Apache-2.0",
@@ -50,7 +50,7 @@
     "@tsconfig/node14": "^1.0.1",
     "@types/jest": "^26.0.15",
     "@types/json-schema-faker": "^0.5.1",
-    "@types/node": "^14.14.16",
+    "@types/node": "^16.7.13",
     "@typescript-eslint/eslint-plugin": "4.8.2",
     "@typescript-eslint/parser": "4.30.0",
     "eslint": "7.14.0",
