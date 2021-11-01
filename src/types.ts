@@ -24,6 +24,12 @@ export interface PubSubConfig {
    * @default /
    */
   path?: string;
+  /**
+   * If true, always ack the pubsub message,
+   * regardless if the handler succeeds or not.
+   * @default false
+   */
+  alwaysAck?: boolean;
 }
 
 export const PubSubMessage = Type.Object({

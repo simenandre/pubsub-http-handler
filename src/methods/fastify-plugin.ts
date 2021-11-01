@@ -19,7 +19,13 @@ const pubSubFastifyPluginAsync: FastifyPluginAsync<PubSubConfig> = async (
       },
     },
     async (req, reply) => {
+      let hasAcked = false;
       try {
+        if (options.alwaysAck) {
+          reply.code(204).send();
+          hasAcked = true;
+        }
+
         const res = await handlePubSubMessage({
           message: req.body.message,
           handler,
@@ -27,14 +33,17 @@ const pubSubFastifyPluginAsync: FastifyPluginAsync<PubSubConfig> = async (
           context: req.body,
         });
 
-        reply.code((res && res.statusCode) || 204);
+        if (!hasAcked) {
+          reply.code((res && res.statusCode) || 204).send();
+        }
       } catch (error) {
         if (onError) {
           await onError(error);
-          reply.code(204);
-        } else throw error;
+          reply.code(204).send();
+        } else {
+          throw error;
+        }
       }
-      reply.send();
     },
   );
 };

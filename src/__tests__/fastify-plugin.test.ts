@@ -110,4 +110,30 @@ describe('fastify-plugin', () => {
 
     expect(res.statusCode).toBe(204);
   });
+
+  it.only('should support immediate ack', async () => {
+    let shouldFinish = false;
+    let handlerFinished = false;
+
+    app.register(pubSubFastifyPlugin, {
+      handler: async () => {
+        while (!shouldFinish) {
+          await new Promise(res => setTimeout(res, 50));
+        }
+        handlerFinished = true;
+      },
+
+      alwaysAck: true,
+    });
+
+    const res = await app.inject({
+      method: 'POST',
+      url: '/',
+      payload: createPubSubRequest('boops'),
+    });
+
+    expect(res.statusCode).toBe(204);
+    expect(handlerFinished).toEqual(false);
+    shouldFinish = true;
+  });
 });
