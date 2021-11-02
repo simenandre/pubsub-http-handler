@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.2...v3.0.0) (2021-11-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* `context` returns Fastify's request variable instead of body object.
+
+### Features
+
+* Add Fastify request to context ([#51](https://www.github.com/cobraz/pubsub-http-handler/issues/51)) ([343ad79](https://www.github.com/cobraz/pubsub-http-handler/commit/343ad794d17fb25f7965236e60f7428227ba0737))
+
 ### [2.1.2](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.1...v2.1.2) (2021-09-07)
 
 
