@@ -1,4 +1,4 @@
-import { FastifyPluginAsync } from 'fastify';
+import { FastifyPluginAsync, FastifyRequest } from 'fastify';
 import fp from 'fastify-plugin';
 import { handlePubSubMessage } from '../common';
 import { PubSubConfig, PubSubRequest, PubSubRequestType } from '../types';
@@ -20,11 +20,11 @@ const pubSubFastifyPluginAsync: FastifyPluginAsync<PubSubConfig> = async (
     },
     async (req, reply) => {
       try {
-        const res = await handlePubSubMessage({
+        const res = await handlePubSubMessage<FastifyRequest>({
           message: req.body.message,
           handler,
           parseJson,
-          context: req.body,
+          context: req,
         });
 
         reply.code((res && res.statusCode) || 204);
