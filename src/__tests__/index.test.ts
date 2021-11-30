@@ -9,12 +9,14 @@ describe('index', () => {
           "kind": Symbol(ObjectKind),
           "properties": Object {
             "attributes": Object {
-              "additionalProperties": Object {
-                "kind": Symbol(StringKind),
-                "type": "string",
-              },
-              "kind": Symbol(DictKind),
+              "kind": Symbol(RecordKind),
               "modifier": Symbol(OptionalModifier),
+              "patternProperties": Object {
+                "^.*$": Object {
+                  "kind": Symbol(StringKind),
+                  "type": "string",
+                },
+              },
               "type": "object",
             },
             "data": Object {
@@ -39,12 +41,14 @@ describe('index', () => {
               "kind": Symbol(ObjectKind),
               "properties": Object {
                 "attributes": Object {
-                  "additionalProperties": Object {
-                    "kind": Symbol(StringKind),
-                    "type": "string",
-                  },
-                  "kind": Symbol(DictKind),
+                  "kind": Symbol(RecordKind),
                   "modifier": Symbol(OptionalModifier),
+                  "patternProperties": Object {
+                    "^.*$": Object {
+                      "kind": Symbol(StringKind),
+                      "type": "string",
+                    },
+                  },
                   "type": "object",
                 },
                 "data": Object {
