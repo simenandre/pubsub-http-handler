@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [3.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.0...v3.0.1) (2021-12-01)
+
+
+### Bug Fixes
+
+* update typebox ([#54](https://www.github.com/cobraz/pubsub-http-handler/issues/54)) ([b1d0a8e](https://www.github.com/cobraz/pubsub-http-handler/commit/b1d0a8ecf482deb8ebbf22b291541a277f148c1e))
+
 ## [3.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v2.1.2...v3.0.0) (2021-11-02)
 
 
