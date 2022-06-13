@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.0.0...v4.0.0) (2022-06-13)
+
+
+### Miscellaneous Chores
+
+* release 4.0.0 ([9639062](https://www.github.com/cobraz/pubsub-http-handler/commit/963906279e7b2d647ce8c7891fe0250449b0fcf4))
+* temporarily remove cache ([f56df2b](https://www.github.com/cobraz/pubsub-http-handler/commit/f56df2b6ea7370e9de8cdb55df6a7c0bd3c0ec9e))
+
 ## [4.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.1...v4.0.0) (2022-06-13)
 
 
