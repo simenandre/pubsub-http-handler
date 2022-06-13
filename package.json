@@ -1,6 +1,6 @@
 {
   "name": "pubsub-http-handler",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Handle Google PubSub requests with ease",
   "repository": "github:cobraz/pubsub-http-handler",
   "license": "Apache-2.0",
