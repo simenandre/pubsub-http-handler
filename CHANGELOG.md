@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.0.0...v4.1.0) (2022-06-13)
+
+
+### Features
+
+* make log optional for handlePubSubMessage ([f05b28a](https://www.github.com/cobraz/pubsub-http-handler/commit/f05b28ad1b42d3c541f66f332f3cbca7a34127fb))
+
 ### [3.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.0...v3.0.1) (2021-12-01)
 
 
