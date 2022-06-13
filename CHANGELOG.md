@@ -10,6 +10,8 @@ All notable changes to this project will be documented in this file. See
 
 * Bump to Fastivy v4, node to v16 and more
 
+You can read the [migration guide](https://github.com/cobraz/pubsub-http-handler/blob/v4.0.0/migrate-from-v2-and-v3.md) for more information.
+
 ### Features
 
 * Bump to Fastivy v4, node to v16 and more ([f50dfdb](https://www.github.com/cobraz/pubsub-http-handler/commit/f50dfdb989b4f14542eea7095921be46bdd67341))
