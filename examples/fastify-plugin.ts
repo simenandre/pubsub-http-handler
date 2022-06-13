@@ -1,5 +1,9 @@
+import {
+  TypeBoxTypeProvider,
+  ajvTypeBoxPlugin,
+} from '@fastify/type-provider-typebox';
 import Fastify from 'fastify';
-import { pubSubFastifyPlugin, PubSubHandler } from '../src';
+import { PubSubHandler, pubSubFastifyPlugin } from '../src';
 
 interface HandlerArguments {
   name: string;
@@ -10,13 +14,15 @@ interface HandlerArguments {
 }
 
 const server = () => {
-  const fastify = Fastify();
+  const fastify = Fastify({
+    ajv: {
+      plugins: [ajvTypeBoxPlugin],
+    },
+  }).withTypeProvider<TypeBoxTypeProvider>();
 
-  const handler: PubSubHandler<HandlerArguments> = ({ data }) => {
+  const handler: PubSubHandler<HandlerArguments> = ({ data, log }) => {
     const { name, party, bookingId } = data;
-    console.log(
-      `${name} from ${party.name} had a booking with id ${bookingId}`,
-    );
+    log.info(`${name} from ${party.name} had a booking with id ${bookingId}`);
   };
 
   fastify.register(pubSubFastifyPlugin, { handler });

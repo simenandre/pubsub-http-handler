@@ -1,3 +1,4 @@
+import pino from 'pino';
 import {
   PubSubHandler,
   PubSubHandlerResponse,
@@ -9,12 +10,13 @@ export interface HandlePubSubMessageArgs<Context = unknown> {
   handler: PubSubHandler;
   parseJson?: boolean;
   context?: Context;
+  log: pino.Logger;
 }
 
 export async function handlePubSubMessage<Context = unknown>(
   args: HandlePubSubMessageArgs<Context>,
 ): Promise<PubSubHandlerResponse | void> {
-  const { message, parseJson = true, handler, context } = args;
+  const { message, parseJson = true, handler, context, log } = args;
   let data = Buffer.from(message.data, 'base64').toString().trim();
 
   if (parseJson) {
@@ -25,5 +27,6 @@ export async function handlePubSubMessage<Context = unknown>(
     message,
     data,
     context,
+    log,
   });
 }

@@ -9,14 +9,12 @@ interface HandlerArguments {
 }
 
 const server = async () => {
-  const handler: PubSubHandler<HandlerArguments> = ({ data }) => {
+  const handler: PubSubHandler<HandlerArguments> = ({ data, log }) => {
     const { name, party, bookingId } = data;
-    console.log(
-      `${name} from ${party.name} had a booking with id ${bookingId}`,
-    );
+    log.info(`${name} from ${party.name} had a booking with id ${bookingId}`);
   };
 
   await createPubSubServer(handler);
 };
 
-server().then(console.log).catch(console.error);
+server();

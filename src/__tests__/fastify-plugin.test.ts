@@ -1,4 +1,5 @@
-import fastify, { FastifyInstance } from 'fastify';
+import Fastify, { FastifyInstance } from 'fastify';
+import { ajvTypeBoxPlugin } from '@fastify/type-provider-typebox';
 import { pubSubFastifyPlugin } from '../methods/fastify-plugin';
 import { createPubSubRequest } from './fixtures';
 
@@ -6,7 +7,11 @@ describe('fastify-plugin', () => {
   let app: FastifyInstance;
 
   beforeEach(async () => {
-    app = fastify();
+    app = Fastify({
+      ajv: {
+        plugins: [ajvTypeBoxPlugin],
+      },
+    });
   });
 
   afterAll(async () => {

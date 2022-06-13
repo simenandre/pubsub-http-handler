@@ -6,7 +6,7 @@ jest.mock('fastify', () => ({
   default: jest.fn(() => ({ register: () => {}, listen })),
 }));
 
-describe('server', () => {
+describe('server-utils', () => {
   it('should listen', async () => {
     jest.doMock('fastify');
     const handler = jest.fn();

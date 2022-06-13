@@ -4,6 +4,8 @@ export interface HelloWorld {
   name: string;
 }
 
-export const helloHttp = createPubSubCloudFunctions<HelloWorld>(({ data }) => {
-  console.log(`Hello, ${data.name}`);
-});
+export const helloHttp = createPubSubCloudFunctions<HelloWorld>(
+  ({ data, log }) => {
+    log.info(`Hello, ${data.name}`);
+  },
+);
