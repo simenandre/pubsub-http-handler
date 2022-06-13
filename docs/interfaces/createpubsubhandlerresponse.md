@@ -1,28 +1,37 @@
-**[pubsub-http-handler](../README.md)**
-
-> [Globals](../README.md) / CreatePubSubHandlerResponse
+[pubsub-http-handler](../README.md) / CreatePubSubHandlerResponse
 
 # Interface: CreatePubSubHandlerResponse
 
-## Hierarchy
-
-* **CreatePubSubHandlerResponse**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [fastify](createpubsubhandlerresponse.md#fastify)
-* [listen](createpubsubhandlerresponse.md#listen)
+- [fastify](CreatePubSubHandlerResponse.md#fastify)
+
+### Methods
+
+- [listen](CreatePubSubHandlerResponse.md#listen)
 
 ## Properties
 
 ### fastify
 
-•  **fastify**: FastifyInstance
+• **fastify**: `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`, `FastifyLoggerInstance`, `FastifyTypeProviderDefault`\>
 
-___
+#### Defined in
+
+[methods/server.ts:32](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L32)
+
+## Methods
 
 ### listen
 
-•  **listen**: () => Promise<void\>
+▸ **listen**(): `Promise`<`void`\>
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[methods/server.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L31)

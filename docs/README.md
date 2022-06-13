@@ -1,203 +1,261 @@
-**[pubsub-http-handler](README.md)**
-
-> Globals
+pubsub-http-handler
 
 # pubsub-http-handler
 
-## Index
+## Table of contents
 
 ### Classes
 
-* [PubSubHandlerResponse](classes/pubsubhandlerresponse.md)
+- [PubSubHandlerResponse](classes/PubSubHandlerResponse.md)
 
 ### Interfaces
 
-* [CreatePubSubHandlerResponse](interfaces/createpubsubhandlerresponse.md)
-* [HandlePubSubMessageArgs](interfaces/handlepubsubmessageargs.md)
-* [PubSubConfig](interfaces/pubsubconfig.md)
-* [PubSubServerConfig](interfaces/pubsubserverconfig.md)
+- [CreatePubSubHandlerResponse](interfaces/CreatePubSubHandlerResponse.md)
+- [HandlePubSubMessageArgs](interfaces/HandlePubSubMessageArgs.md)
+- [PubSubCloudFunctionsConfig](interfaces/PubSubCloudFunctionsConfig.md)
+- [PubSubConfig](interfaces/PubSubConfig.md)
+- [PubSubServerConfig](interfaces/PubSubServerConfig.md)
 
-### Type aliases
+### Type Aliases
 
-* [CloudFunctionFun](README.md#cloudfunctionfun)
-* [PubSubCloudFunctionsConfig](README.md#pubsubcloudfunctionsconfig)
-* [PubSubHandler](README.md#pubsubhandler)
-* [PubSubMessageType](README.md#pubsubmessagetype)
-* [PubSubRequestType](README.md#pubsubrequesttype)
+- [CloudFunctionFun](README.md#cloudfunctionfun)
+- [OnErrorHandler](README.md#onerrorhandler)
+- [PubSubHandler](README.md#pubsubhandler)
+- [PubSubMessageType](README.md#pubsubmessagetype)
+- [PubSubRequestType](README.md#pubsubrequesttype)
 
 ### Variables
 
-* [PubSubMessage](README.md#pubsubmessage)
-* [PubSubRequest](README.md#pubsubrequest)
-* [listen](README.md#listen)
-* [pubSubFastifyPlugin](README.md#pubsubfastifyplugin)
+- [PubSubMessage](README.md#pubsubmessage)
+- [PubSubRequest](README.md#pubsubrequest)
 
 ### Functions
 
-* [createPubSubCloudFunctions](README.md#createpubsubcloudfunctions)
-* [createPubSubRequest](README.md#createpubsubrequest)
-* [createPubSubServer](README.md#createpubsubserver)
-* [createPubSubdata](README.md#createpubsubdata)
-* [handlePubSubMessage](README.md#handlepubsubmessage)
-* [pubSubFastifyPluginAsync](README.md#pubsubfastifypluginasync)
+- [createPubSubCloudFunctions](README.md#createpubsubcloudfunctions)
+- [createPubSubServer](README.md#createpubsubserver)
+- [handlePubSubMessage](README.md#handlepubsubmessage)
+- [pubSubFastifyPlugin](README.md#pubsubfastifyplugin)
 
-## Type aliases
+## Type Aliases
 
 ### CloudFunctionFun
 
-Ƭ  **CloudFunctionFun**: (req: express.Request, res: express.Response) => Promise<void\>
+Ƭ **CloudFunctionFun**: (`req`: `express.Request`, `res`: `express.Response`) => `Promise`<`void`\>
+
+#### Type declaration
+
+▸ (`req`, `res`): `Promise`<`void`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `req` | `express.Request` |
+| `res` | `express.Response` |
+
+##### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[methods/cloud-functions.ts:12](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/cloud-functions.ts#L12)
 
 ___
 
-### PubSubCloudFunctionsConfig
+### OnErrorHandler
 
-Ƭ  **PubSubCloudFunctionsConfig**: Omit<[PubSubConfig](interfaces/pubsubconfig.md), \"handler\" \| \"path\"\>
+Ƭ **OnErrorHandler**: (`error`: `unknown`) => `void` \| `Promise`<`void`\>
+
+#### Type declaration
+
+▸ (`error`): `void` \| `Promise`<`void`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
+
+##### Returns
+
+`void` \| `Promise`<`void`\>
+
+#### Defined in
+
+[types.ts:56](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L56)
 
 ___
 
 ### PubSubHandler
 
-Ƭ  **PubSubHandler**<T\>: (args: { context?: unknown ; data?: T ; message: [PubSubMessageType](README.md#pubsubmessagetype)  }) => Promise<[PubSubHandlerResponse](classes/pubsubhandlerresponse.md) \| void\> \| [PubSubHandlerResponse](classes/pubsubhandlerresponse.md) \| void
+Ƭ **PubSubHandler**<`T`\>: (`args`: { `context?`: `unknown` ; `data?`: `T` ; `log`: `FastifyLoggerInstance` ; `message`: [`PubSubMessageType`](README.md#pubsubmessagetype)  }) => `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
 
-#### Type parameters:
+#### Type parameters
 
-Name | Default |
------- | ------ |
-`T` | any |
+| Name | Type |
+| :------ | :------ |
+| `T` | `any` |
+
+#### Type declaration
+
+▸ (`args`): `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | `Object` |
+| `args.context?` | `unknown` |
+| `args.data?` | `T` |
+| `args.log` | `FastifyLoggerInstance` |
+| `args.message` | [`PubSubMessageType`](README.md#pubsubmessagetype) |
+
+##### Returns
+
+`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
+
+#### Defined in
+
+[types.ts:49](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L49)
 
 ___
 
 ### PubSubMessageType
 
-Ƭ  **PubSubMessageType**: Static<*typeof* [PubSubMessage](README.md#pubsubmessage)\>
+Ƭ **PubSubMessageType**: `Static`<typeof [`PubSubMessage`](README.md#pubsubmessage)\>
+
+#### Defined in
+
+[types.ts:36](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L36)
 
 ___
 
 ### PubSubRequestType
 
-Ƭ  **PubSubRequestType**: Static<*typeof* [PubSubRequest](README.md#pubsubrequest)\>
+Ƭ **PubSubRequestType**: `Static`<typeof [`PubSubRequest`](README.md#pubsubrequest)\>
+
+#### Defined in
+
+[types.ts:43](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L43)
 
 ## Variables
 
 ### PubSubMessage
 
-• `Const` **PubSubMessage**: TObject<{ attributes: TDict<TString\> = Type.Dict(Type.String()); data: TString = Type.String(); messageId: TOptional<TString\> = Type.Optional(Type.String()) }\> = Type.Object({ attributes: Type.Dict(Type.String()), data: Type.String(), messageId: Type.Optional(Type.String()),})
+• `Const` **PubSubMessage**: `TObject`<{ `attributes`: `TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ; `messageId`: `TOptional`<`TString`\>  }\>
+
+#### Defined in
+
+[types.ts:30](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L30)
 
 ___
 
 ### PubSubRequest
 
-• `Const` **PubSubRequest**: TObject<{ message: TObject<{ attributes: TDict<TString\> = Type.Dict(Type.String()); data: TString = Type.String(); messageId: TOptional<TString\> = Type.Optional(Type.String()) }\> = PubSubMessage; subscription: TString = Type.String() }\> = Type.Object({ message: PubSubMessage, subscription: Type.String(),})
+• `Const` **PubSubRequest**: `TObject`<{ `message`: `TObject`<{ `attributes`: `TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ; `messageId`: `TOptional`<`TString`\>  }\> = PubSubMessage; `subscription`: `TString`  }\>
 
-___
+#### Defined in
 
-### listen
-
-• `Const` **listen**: Mock<any, any\> = jest.fn()
-
-___
-
-### pubSubFastifyPlugin
-
-• `Const` **pubSubFastifyPlugin**: FastifyPluginAsync<[PubSubConfig](interfaces/pubsubconfig.md), Server\> = fp(pubSubFastifyPluginAsync, '3.x')
+[types.ts:38](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L38)
 
 ## Functions
 
 ### createPubSubCloudFunctions
 
-▸ **createPubSubCloudFunctions**<T\>(`handler`: [PubSubHandler](README.md#pubsubhandler)<T\>, `options?`: [PubSubCloudFunctionsConfig](README.md#pubsubcloudfunctionsconfig)): [CloudFunctionFun](README.md#cloudfunctionfun)
+▸ **createPubSubCloudFunctions**<`T`\>(`handler`, `options?`): [`CloudFunctionFun`](README.md#cloudfunctionfun)
 
-#### Type parameters:
+#### Type parameters
 
-Name | Default |
------- | ------ |
-`T` | unknown |
+| Name | Type |
+| :------ | :------ |
+| `T` | `unknown` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Default value |
------- | ------ | ------ |
-`handler` | [PubSubHandler](README.md#pubsubhandler)<T\> | - |
-`options` | [PubSubCloudFunctionsConfig](README.md#pubsubcloudfunctionsconfig) | {} |
+| Name | Type |
+| :------ | :------ |
+| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`T`\> |
+| `options` | [`PubSubCloudFunctionsConfig`](interfaces/PubSubCloudFunctionsConfig.md) |
 
-**Returns:** [CloudFunctionFun](README.md#cloudfunctionfun)
+#### Returns
 
-___
+[`CloudFunctionFun`](README.md#cloudfunctionfun)
 
-### createPubSubRequest
+#### Defined in
 
-▸ **createPubSubRequest**(`input`: unknown, `stringify?`: boolean): [PubSubRequestType](README.md#pubsubrequesttype)
-
-#### Parameters:
-
-Name | Type | Default value |
------- | ------ | ------ |
-`input` | unknown | - |
-`stringify` | boolean | true |
-
-**Returns:** [PubSubRequestType](README.md#pubsubrequesttype)
+[methods/cloud-functions.ts:17](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/cloud-functions.ts#L17)
 
 ___
 
 ### createPubSubServer
 
-▸ **createPubSubServer**<T\>(`handler`: [PubSubHandler](README.md#pubsubhandler)<T\>, `config?`: [PubSubServerConfig](interfaces/pubsubserverconfig.md)): [CreatePubSubHandlerResponse](interfaces/createpubsubhandlerresponse.md)
+▸ **createPubSubServer**<`T`\>(`handler`, `config?`): [`CreatePubSubHandlerResponse`](interfaces/CreatePubSubHandlerResponse.md)
 
-#### Type parameters:
+#### Type parameters
 
-Name | Default |
------- | ------ |
-`T` | unknown |
+| Name | Type |
+| :------ | :------ |
+| `T` | `unknown` |
 
-#### Parameters:
+#### Parameters
 
-Name | Type | Default value |
------- | ------ | ------ |
-`handler` | [PubSubHandler](README.md#pubsubhandler)<T\> | - |
-`config` | [PubSubServerConfig](interfaces/pubsubserverconfig.md) | {} |
+| Name | Type |
+| :------ | :------ |
+| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`T`\> |
+| `config` | [`PubSubServerConfig`](interfaces/PubSubServerConfig.md) |
 
-**Returns:** [CreatePubSubHandlerResponse](interfaces/createpubsubhandlerresponse.md)
+#### Returns
 
-___
+[`CreatePubSubHandlerResponse`](interfaces/CreatePubSubHandlerResponse.md)
 
-### createPubSubdata
+#### Defined in
 
-▸ **createPubSubdata**(`input`: unknown, `stringify?`: boolean): [PubSubMessageType](README.md#pubsubmessagetype)
-
-#### Parameters:
-
-Name | Type | Default value |
------- | ------ | ------ |
-`input` | unknown | - |
-`stringify` | boolean | true |
-
-**Returns:** [PubSubMessageType](README.md#pubsubmessagetype)
+[methods/server.ts:35](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L35)
 
 ___
 
 ### handlePubSubMessage
 
-▸ **handlePubSubMessage**(`args`: [HandlePubSubMessageArgs](interfaces/handlepubsubmessageargs.md)): Promise<[PubSubHandlerResponse](classes/pubsubhandlerresponse.md) \| void\>
+▸ **handlePubSubMessage**<`Context`\>(`args`): `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\>
 
-#### Parameters:
+#### Type parameters
 
-Name | Type |
------- | ------ |
-`args` | [HandlePubSubMessageArgs](interfaces/handlepubsubmessageargs.md) |
+| Name | Type |
+| :------ | :------ |
+| `Context` | `unknown` |
 
-**Returns:** Promise<[PubSubHandlerResponse](classes/pubsubhandlerresponse.md) \| void\>
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `args` | [`HandlePubSubMessageArgs`](interfaces/HandlePubSubMessageArgs.md)<`Context`\> |
+
+#### Returns
+
+`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\>
+
+#### Defined in
+
+[common.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/common.ts#L16)
 
 ___
 
-### pubSubFastifyPluginAsync
+### pubSubFastifyPlugin
 
-▸ `Const`**pubSubFastifyPluginAsync**(`fastify`: FastifyInstance<Server, IncomingMessage, ServerResponse, FastifyLoggerInstance\>, `options`: [PubSubConfig](interfaces/pubsubconfig.md)): Promise<void\>
+▸ **pubSubFastifyPlugin**(`instance`, `opts`): `Promise`<`void`\>
 
-#### Parameters:
+#### Parameters
 
-Name | Type |
------- | ------ |
-`fastify` | FastifyInstance<Server, IncomingMessage, ServerResponse, FastifyLoggerInstance\> |
-`options` | [PubSubConfig](interfaces/pubsubconfig.md) |
+| Name | Type |
+| :------ | :------ |
+| `instance` | `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`, `FastifyLoggerInstance`, `FastifyTypeProviderDefault`\> |
+| `opts` | [`PubSubConfig`](interfaces/PubSubConfig.md) |
 
-**Returns:** Promise<void\>
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[methods/fastify-plugin.ts:5](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/fastify-plugin.ts#L5)

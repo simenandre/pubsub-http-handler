@@ -1,21 +1,29 @@
-**[pubsub-http-handler](../README.md)**
-
-> [Globals](../README.md) / PubSubHandlerResponse
+[pubsub-http-handler](../README.md) / PubSubHandlerResponse
 
 # Class: PubSubHandlerResponse
 
-## Hierarchy
+## Table of contents
 
-* **PubSubHandlerResponse**
+### Constructors
 
-## Index
+- [constructor](PubSubHandlerResponse.md#constructor)
 
 ### Properties
 
-* [statusCode](pubsubhandlerresponse.md#statuscode)
+- [statusCode](PubSubHandlerResponse.md#statuscode)
+
+## Constructors
+
+### constructor
+
+• **new PubSubHandlerResponse**()
 
 ## Properties
 
 ### statusCode
 
-• `Optional` **statusCode**: number
+• `Optional` **statusCode**: `number`
+
+#### Defined in
+
+[types.ts:46](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L46)
