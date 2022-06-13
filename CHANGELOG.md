@@ -3,27 +3,6 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.0.0...v4.0.0) (2022-06-13)
-
-
-### Miscellaneous Chores
-
-* release 4.0.0 ([9639062](https://www.github.com/cobraz/pubsub-http-handler/commit/963906279e7b2d647ce8c7891fe0250449b0fcf4))
-* temporarily remove cache ([f56df2b](https://www.github.com/cobraz/pubsub-http-handler/commit/f56df2b6ea7370e9de8cdb55df6a7c0bd3c0ec9e))
-
-## [4.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.1...v4.0.0) (2022-06-13)
-
-
-### ⚠ BREAKING CHANGES
-
-* Bump to Fastivy v4, node to v16 and more
-
-You can read the [migration guide](https://github.com/cobraz/pubsub-http-handler/blob/v4.0.0/migrate-from-v2-and-v3.md) for more information.
-
-### Features
-
-* Bump to Fastivy v4, node to v16 and more ([f50dfdb](https://www.github.com/cobraz/pubsub-http-handler/commit/f50dfdb989b4f14542eea7095921be46bdd67341))
-
 ### [3.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.0...v3.0.1) (2021-12-01)
 
 
