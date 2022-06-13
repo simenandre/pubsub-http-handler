@@ -1,4 +1,4 @@
-# Migrate from v2
+# Migrate from v2 and v3
 
 With Fastify v4, we've changed some of the API for the PubSubHandler and bumped
 node to v16. Most of the changes aren't an issue for most users.
@@ -11,7 +11,7 @@ node to v16. Most of the changes aren't an issue for most users.
 - Added `pino` logger to Cloud Functions
 - Added `log` to handler (see example down below)
 
-# Using `pubSubFastifyPlugin` in v3
+# Using `pubSubFastifyPlugin` in v4
 
 ```typescript
 import Fastify from 'fastify';
