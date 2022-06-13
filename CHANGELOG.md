@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.1...v4.0.0) (2022-06-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Bump to Fastivy v4, node to v16 and more
+
+### Features
+
+* Bump to Fastivy v4, node to v16 and more ([f50dfdb](https://www.github.com/cobraz/pubsub-http-handler/commit/f50dfdb989b4f14542eea7095921be46bdd67341))
+
 ### [3.0.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v3.0.0...v3.0.1) (2021-12-01)
 
 
