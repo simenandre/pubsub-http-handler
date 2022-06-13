@@ -23,9 +23,13 @@ describe('common', () => {
       message,
       handler,
       parseJson: false,
-      log: pino(),
+      log: {} as pino.Logger,
     });
-    expect(handler).toHaveBeenCalledWith({ message, data: 'hello-world' });
+    expect(handler).toHaveBeenCalledWith({
+      message,
+      data: 'hello-world',
+      log: {},
+    });
   });
   it('should handle JSON PubSub messages', async () => {
     const message = createPubSubdata({ name: 'Simen' });
@@ -35,9 +39,13 @@ describe('common', () => {
       message,
       handler,
       parseJson: true,
-      log: pino(),
+      log: {} as pino.Logger,
     });
-    expect(handler).toHaveBeenCalledWith({ message, data: { name: 'Simen' } });
+    expect(handler).toHaveBeenCalledWith({
+      message,
+      data: { name: 'Simen' },
+      log: {},
+    });
   });
 
   it('should pass context', async () => {
@@ -48,13 +56,13 @@ describe('common', () => {
       message,
       handler,
       context: { hello: 'there' },
-      log: pino(),
+      log: {} as pino.Logger,
     });
     expect(handler).toHaveBeenCalledWith({
       message,
       data: '',
       context: { hello: 'there' },
-      log: pino(),
+      log: {} as pino.Logger,
     });
   });
 });
