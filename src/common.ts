@@ -1,4 +1,5 @@
 import pino from 'pino';
+import { gcpLogOptions } from './pino-config';
 import {
   PubSubHandler,
   PubSubHandlerResponse,
@@ -10,13 +11,19 @@ export interface HandlePubSubMessageArgs<Context = unknown> {
   handler: PubSubHandler;
   parseJson?: boolean;
   context?: Context;
-  log: pino.Logger;
+  log?: pino.Logger;
 }
 
 export async function handlePubSubMessage<Context = unknown>(
   args: HandlePubSubMessageArgs<Context>,
 ): Promise<PubSubHandlerResponse | void> {
-  const { message, parseJson = true, handler, context, log } = args;
+  const {
+    message,
+    parseJson = true,
+    handler,
+    context,
+    log = pino(gcpLogOptions()),
+  } = args;
   let data = Buffer.from(message.data, 'base64').toString().trim();
 
   if (parseJson) {
