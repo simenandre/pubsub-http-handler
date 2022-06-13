@@ -1,8 +1,6 @@
 import { createPubSubCloudFunctions } from '../methods/cloud-functions';
 import { createPubSubRequest } from './fixtures';
 import type * as express from 'express';
-import pino from 'pino';
-import { gcpLogOptions } from '../pino-config';
 
 describe('cloud functions', () => {
   it('should forward requests', async () => {

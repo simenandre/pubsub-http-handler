@@ -45,7 +45,8 @@
     "@sinclair/typebox": "^0.23.5",
     "@types/express": "^4.17.13",
     "fastify": "^4.0.1",
-    "pino": "^8.0.0"
+    "pino": "^8.0.0",
+    "pino-cloud-logging": "^1.0.3"
   },
   "prettier": "@cobraz/prettier",
   "devDependencies": {

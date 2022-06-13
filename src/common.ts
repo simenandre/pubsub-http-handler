@@ -1,5 +1,5 @@
 import pino from 'pino';
-import { gcpLogOptions } from './pino-config';
+import { gcpLogOptions } from 'pino-cloud-logging';
 import {
   PubSubHandler,
   PubSubHandlerResponse,

@@ -3575,6 +3575,13 @@ pino-abstract-transport@v0.5.0:
     duplexify "^4.1.2"
     split2 "^4.0.0"
 
+pino-cloud-logging@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/pino-cloud-logging/-/pino-cloud-logging-1.0.3.tgz#9556235cdc2f56eaf40593a3f533124bddd1977d"
+  integrity sha512-maa/zdbW2hvfsZTixFyLJqsk6a/B5QP3wgx0sJYDIzfflHjAfKE+GrR+653F5DVwDz/HPMjfiAga9n4a9mFDXg==
+  dependencies:
+    pino "^8.0.0"
+
 pino-std-serializers@^5.0.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/pino-std-serializers/-/pino-std-serializers-5.5.0.tgz#7693eb57c1420c9bbb10454a30d15f747be9cfa5"

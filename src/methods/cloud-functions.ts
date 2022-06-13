@@ -1,7 +1,7 @@
 import type * as express from 'express';
 import pino from 'pino';
+import { gcpLogOptions } from 'pino-cloud-logging';
 import { handlePubSubMessage } from '../common';
-import { gcpLogOptions } from '../pino-config';
 import { PubSubConfig, PubSubHandler } from '../types';
 
 export interface PubSubCloudFunctionsConfig
