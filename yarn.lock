@@ -3576,9 +3576,9 @@ pino-abstract-transport@v0.5.0:
     split2 "^4.0.0"
 
 pino-cloud-logging@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/pino-cloud-logging/-/pino-cloud-logging-1.0.3.tgz#9556235cdc2f56eaf40593a3f533124bddd1977d"
-  integrity sha512-maa/zdbW2hvfsZTixFyLJqsk6a/B5QP3wgx0sJYDIzfflHjAfKE+GrR+653F5DVwDz/HPMjfiAga9n4a9mFDXg==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/pino-cloud-logging/-/pino-cloud-logging-1.0.5.tgz#eb22eb6aed0b4947245010a2a70beefeb145e67d"
+  integrity sha512-OSOuuMlQucW0li5RBWNCI0gUmFvPhBIbxjmjrUkTkKRvOtCiEGD/576Gq9HB5qp8UTkbbXir4h8bVvV8vg3FCA==
   dependencies:
     pino "^8.0.0"
 
