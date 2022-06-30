@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.1.0...v4.2.0) (2022-06-30)
+
+
+### Features
+
+* upgrade TypeBox plugin ([#95](https://www.github.com/cobraz/pubsub-http-handler/issues/95)) ([dee85d6](https://www.github.com/cobraz/pubsub-http-handler/commit/dee85d629efbccd29ecc2bb1ae47ba6235b83c8e))
+
+
+### Bug Fixes
+
+* use pino-cloud-logging ([b7b8fa5](https://www.github.com/cobraz/pubsub-http-handler/commit/b7b8fa559414b550836f8274e2340954ee91b763))
+
 ## [4.1.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.0.0...v4.1.0) (2022-06-13)
 
 
