@@ -6,69 +6,70 @@ describe('index', () => {
       Object {
         "PubSubHandlerResponse": [Function],
         "PubSubMessage": Object {
-          "kind": Symbol(ObjectKind),
           "properties": Object {
             "attributes": Object {
-              "kind": Symbol(RecordKind),
-              "modifier": Symbol(OptionalModifier),
+              "additionalProperties": false,
               "patternProperties": Object {
                 "^.*$": Object {
-                  "kind": Symbol(StringKind),
                   "type": "string",
+                  Symbol(TypeBox.Kind): "String",
                 },
               },
               "type": "object",
+              Symbol(TypeBox.Modifier): "Optional",
+              Symbol(TypeBox.Kind): "Record",
             },
             "data": Object {
-              "kind": Symbol(StringKind),
               "type": "string",
+              Symbol(TypeBox.Kind): "String",
             },
             "messageId": Object {
-              "kind": Symbol(StringKind),
-              "modifier": Symbol(OptionalModifier),
               "type": "string",
+              Symbol(TypeBox.Modifier): "Optional",
+              Symbol(TypeBox.Kind): "String",
             },
           },
           "required": Array [
             "data",
           ],
           "type": "object",
+          Symbol(TypeBox.Kind): "Object",
         },
         "PubSubRequest": Object {
-          "kind": Symbol(ObjectKind),
           "properties": Object {
             "message": Object {
-              "kind": Symbol(ObjectKind),
               "properties": Object {
                 "attributes": Object {
-                  "kind": Symbol(RecordKind),
-                  "modifier": Symbol(OptionalModifier),
+                  "additionalProperties": false,
                   "patternProperties": Object {
                     "^.*$": Object {
-                      "kind": Symbol(StringKind),
                       "type": "string",
+                      Symbol(TypeBox.Kind): "String",
                     },
                   },
                   "type": "object",
+                  Symbol(TypeBox.Modifier): "Optional",
+                  Symbol(TypeBox.Kind): "Record",
                 },
                 "data": Object {
-                  "kind": Symbol(StringKind),
                   "type": "string",
+                  Symbol(TypeBox.Kind): "String",
                 },
                 "messageId": Object {
-                  "kind": Symbol(StringKind),
-                  "modifier": Symbol(OptionalModifier),
                   "type": "string",
+                  Symbol(TypeBox.Modifier): "Optional",
+                  Symbol(TypeBox.Kind): "String",
                 },
               },
               "required": Array [
                 "data",
               ],
               "type": "object",
+              Symbol(TypeBox.Kind): "Object",
             },
             "subscription": Object {
-              "kind": Symbol(StringKind),
               "type": "string",
+              Symbol(TypeBox.Kind): "String",
             },
           },
           "required": Array [
@@ -76,6 +77,7 @@ describe('index', () => {
             "subscription",
           ],
           "type": "object",
+          Symbol(TypeBox.Kind): "Object",
         },
         "createPubSubCloudFunctions": [Function],
         "createPubSubServer": [Function],
