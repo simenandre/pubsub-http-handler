@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [4.1.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.1.0...v4.1.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* use pino-cloud-logging ([b7b8fa5](https://www.github.com/cobraz/pubsub-http-handler/commit/b7b8fa559414b550836f8274e2340954ee91b763))
+
 ## [4.1.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.0.0...v4.1.0) (2022-06-13)
 
 
