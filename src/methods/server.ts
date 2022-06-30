@@ -1,4 +1,3 @@
-import { ajvTypeBoxPlugin } from '@fastify/type-provider-typebox';
 import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 import { PubSubConfig, PubSubHandler } from '../types';
 import { pubSubFastifyPlugin } from './fastify-plugin';
@@ -50,12 +49,7 @@ export function createPubSubServer<T = unknown>(
     host = address;
   }
 
-  const fastify = Fastify({
-    ...fastifyConfig,
-    ajv: {
-      plugins: [ajvTypeBoxPlugin],
-    },
-  });
+  const fastify = Fastify(fastifyConfig);
 
   fastify.register(pubSubFastifyPlugin, { handler, parseJson, path, onError });
 

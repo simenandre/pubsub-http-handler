@@ -390,10 +390,10 @@
   dependencies:
     fast-json-stringify "^4.0.0"
 
-"@fastify/type-provider-typebox@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-1.0.0.tgz#cbf550cfba29cec8ac3a06c672caddfb7e61dd03"
-  integrity sha512-PPg4mKXyXfKRM/KTa2HY04Xta2+fcVmHd6XjmzCdws32dutG0raExeQWhhzVftQMuYP62f6VGXRBOQBnpCBJ7w==
+"@fastify/type-provider-typebox@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-2.0.0.tgz#f5a896353d1232727c025cf42dd64c7a1cafa54b"
+  integrity sha512-u8a30RJ23lXbVjxga9BjXWS7XAzww0eL13HO01SlkE7j1jQZ2TaM5mycV1y/ygAQ3ln0FaoovY0X1qOeeZU4lQ==
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
@@ -679,10 +679,15 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@sinclair/typebox@^0.23.3", "@sinclair/typebox@^0.23.5":
+"@sinclair/typebox@^0.23.3":
   version "0.23.5"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.23.5.tgz#93f7b9f4e3285a7a9ade7557d9a8d36809cbc47d"
   integrity sha512-AFBVi/iT4g20DHoujvMH1aEDn8fGJh4xsRGCP6d8RpLPMqsNPvW01Jcn0QysXTsg++/xj25NmJsGyH9xug/wKg==
+
+"@sinclair/typebox@^0.24.0":
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.1.tgz#b4ff200fb4f18dfd15c53e984d8801e2c8df1526"
+  integrity sha512-v59jW0KQIy4iMP0Pn7gcpQ48YDXa9vOopsRhaPWmsStTxaVNYIqFY3eK6y4PU+53hlQoaQ8pAxU4cPIaMFEJwg==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"

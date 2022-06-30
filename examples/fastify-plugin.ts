@@ -1,7 +1,4 @@
-import {
-  TypeBoxTypeProvider,
-  ajvTypeBoxPlugin,
-} from '@fastify/type-provider-typebox';
+import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import Fastify from 'fastify';
 import { PubSubHandler, pubSubFastifyPlugin } from '../src';
 
@@ -14,11 +11,7 @@ interface HandlerArguments {
 }
 
 const server = () => {
-  const fastify = Fastify({
-    ajv: {
-      plugins: [ajvTypeBoxPlugin],
-    },
-  }).withTypeProvider<TypeBoxTypeProvider>();
+  const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
   const handler: PubSubHandler<HandlerArguments> = ({ data, log }) => {
     const { name, party, bookingId } = data;

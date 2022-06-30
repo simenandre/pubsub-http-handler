@@ -41,8 +41,8 @@
     "cloud-functions"
   ],
   "dependencies": {
-    "@fastify/type-provider-typebox": "^1.0.0",
-    "@sinclair/typebox": "^0.23.5",
+    "@fastify/type-provider-typebox": "^2.0.0",
+    "@sinclair/typebox": "^0.24.0",
     "@types/express": "^4.17.13",
     "fastify": "^4.0.1",
     "pino": "^8.0.0",

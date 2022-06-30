@@ -15,7 +15,7 @@ node to v16. Most of the changes aren't an issue for most users.
 
 ```typescript
 import Fastify from 'fastify';
-import { ajvTypeBoxPlugin, TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
+import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import { pubSubFastifyPlugin } from 'pubsub-http-handler';
 
 interface MyHandler {
@@ -31,11 +31,7 @@ const server = async () => {
     ...
   };
 
-  const fastify = Fastify({
-    ajv: {
-      plugins: [ajvTypeBoxPlugin],
-    },
-  }).withTypeProvider<TypeBoxTypeProvider>()
+  const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>()
 
   fastify.register(pubSubFastifyPlugin)
   fastify.listen();
@@ -47,10 +43,7 @@ const server = async () => {
 The `handler` now comes with a `log` attribute which contains a `pino` instance.
 
 ```typescript
-import {
-  TypeBoxTypeProvider,
-  ajvTypeBoxPlugin,
-} from '@fastify/type-provider-typebox';
+import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import Fastify from 'fastify';
 import { PubSubHandler, pubSubFastifyPlugin } from '../src';
 
@@ -63,11 +56,7 @@ interface HandlerArguments {
 }
 
 const server = () => {
-  const fastify = Fastify({
-    ajv: {
-      plugins: [ajvTypeBoxPlugin],
-    },
-  }).withTypeProvider<TypeBoxTypeProvider>();
+  const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
   const handler: PubSubHandler<HandlerArguments> = ({ data, log }) => {
     const { name, party, bookingId } = data;
