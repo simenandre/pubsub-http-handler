@@ -369,14 +369,14 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fastify/ajv-compiler@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@fastify/ajv-compiler/-/ajv-compiler-3.1.0.tgz#7ccae63da5a115f583ae6cc68173dbc3c1f34405"
-  integrity sha512-+hRMMxcUmdqtnCGPwrI2yczFdlgp3IBR88WlPLimXlgRb8vHBTXz38I17R/9ui+hIt9jx0uOdZKOis77VooHfA==
+"@fastify/ajv-compiler@^3.1.1":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@fastify/ajv-compiler/-/ajv-compiler-3.1.2.tgz#9b3c4ae0f5feeb2a90ee797cff6dc26e1831795b"
+  integrity sha512-m2nzzQJeuVmeGOB9rnII9sZiY8AZ02a9WMQfMBfK1jxdFnxm3FPYKGbYpPjODj4halNogwpolyugbTNpnDCi0A==
   dependencies:
     ajv "^8.10.0"
     ajv-formats "^2.1.1"
-    fast-uri "^1.0.1"
+    fast-uri "^2.0.0"
 
 "@fastify/error@^3.0.0":
   version "3.0.0"
@@ -391,9 +391,9 @@
     fast-json-stringify "^5.0.0"
 
 "@fastify/type-provider-typebox@^2.0.0":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-2.0.1.tgz#50ee44043684432988dfafa7eafb555d98b16290"
-  integrity sha512-Z9Dd+nAiNodeOkyOfJUoGYoZDrfs4wYM0Xq77dc04zkoOLTv25LxysfIND1Tz+UXnHJSfT3mb/9kMrG9YA0bEw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-2.1.0.tgz#6d84233152fbb810e1cdfb1690e8cd8f93101a3b"
+  integrity sha512-FwuzHZAco34m6bEtY/bw4dcEkFCDV2aigWSFkVw7yYomCJ4umA/cn7jstkF3mJKcZXc+1qthx4g3l5BsXXlLPQ==
 
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
@@ -685,9 +685,9 @@
   integrity sha512-AFBVi/iT4g20DHoujvMH1aEDn8fGJh4xsRGCP6d8RpLPMqsNPvW01Jcn0QysXTsg++/xj25NmJsGyH9xug/wKg==
 
 "@sinclair/typebox@^0.24.0":
-  version "0.24.2"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.2.tgz#29f290d20a144ee47106206309eceb1488166d41"
-  integrity sha512-EpdWGQtmnZbXMioI90e+JSL0DnYINu8OX4ruVEXhoXAbgUgSmkpz5FWTiLai1sfg8AfpX8XDCLF50gzlEcBv2A==
+  version "0.24.19"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.19.tgz#5297278e0d8a1aea084685a3216074910ac6c113"
+  integrity sha512-gHJu8cdYTD5p4UqmQHrxaWrtb/jkH5imLXzuBypWhKzNkW0qfmgz+w1xaJccWVuJta1YYUdlDiPHXRTR4Ku0MQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
@@ -1956,22 +1956,17 @@ fast-redact@^3.1.1:
   resolved "https://registry.yarnpkg.com/fast-redact/-/fast-redact-3.1.1.tgz#790fcff8f808c2e12fabbfb2be5cb2deda448fa0"
   integrity sha512-odVmjC8x8jNeMZ3C+rPMESzXVSEU8tSWSHv9HFxP2mm89G/1WwqhrerJDQm9Zus8X6aoRgQDThKqptdNA6bt+A==
 
-fast-uri@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-1.0.1.tgz#dd637f093bccf17ebea58a70c178ee8a70b5aa45"
-  integrity sha512-dbO/+ny6lX4tt7pvfPMTiHfQVR5igYKFa5BJ2a21TWuOgd2ySp5DYswsEGuMcJZLL3/eJ/MQJ5KNcXyNUvDt8w==
-
-fast-uri@^2.1.0:
+fast-uri@^2.0.0, fast-uri@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-2.1.0.tgz#9279432d6b53675c90116b947ed2bbba582d6fb5"
   integrity sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==
 
 fastify@^4.0.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.2.0.tgz#e8a56875083cab0fb0f1dd844b31f0fd145a6900"
-  integrity sha512-0QXEp+8ceKc0fwVakeBLM/1Ss/+fc7a3auuygT+1GjbSAgHfwqxSucUuu0rYjziu32UgEZXfjItYN/a89HWKhw==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.2.1.tgz#44bc04dde3f769527851950da46c8ee32227233c"
+  integrity sha512-eyAWHN9+8IPTnhvGz+leseASGV/JZ75Y+jXXV7tid4awUjCMInY1gazZXuTD95xUW+Ve5vfgLjQ2i1i0/XJjdw==
   dependencies:
-    "@fastify/ajv-compiler" "^3.1.0"
+    "@fastify/ajv-compiler" "^3.1.1"
     "@fastify/error" "^3.0.0"
     "@fastify/fast-json-stringify-compiler" "^4.0.0"
     abstract-logging "^2.0.1"
@@ -2173,17 +2168,6 @@ glob@^7.1.3, glob@^7.1.4:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
-
-glob@^8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-8.0.3.tgz#415c6eb2deed9e502c68fa44a272e6da6eeca42e"
-  integrity sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^5.0.1"
-    once "^1.3.0"
 
 globals@^11.1.0:
   version "11.12.0"
@@ -2982,9 +2966,9 @@ json-parse-even-better-errors@^2.3.0:
   integrity sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==
 
 json-schema-faker@^0.5.0-rcv.32:
-  version "0.5.0-rcv.42"
-  resolved "https://registry.yarnpkg.com/json-schema-faker/-/json-schema-faker-0.5.0-rcv.42.tgz#edb4d1793065ed03c5517f24ec7e0c3c8515e056"
-  integrity sha512-LL3Hm4mMqiAFOecyiB0ECDXQRf9fbm1JOX/5xVYs87hSHLMPNGVLa3oCcVpKz+pmNs/fuI8R3J4awsLnCZGrkg==
+  version "0.5.0-rcv.44"
+  resolved "https://registry.yarnpkg.com/json-schema-faker/-/json-schema-faker-0.5.0-rcv.44.tgz#dca9b8f3a844c0426cf4c581cc8d7f4428f29f90"
+  integrity sha512-MbDxYFsPXTVMawW1Y6zEU7QhfwsT+ZJ2d+LI8n57Y8+Xw1Cdx1hITgsFTLNOJ1lDMHZqWeXGGgMbc1hW0BGisg==
   dependencies:
     json-schema-ref-parser "^6.1.0"
     jsonpath-plus "^5.1.0"
@@ -3215,21 +3199,14 @@ min-indent@^1.0.0:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-minimatch@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  dependencies:
-    brace-expansion "^1.1.7"
-
-minimatch@^3.1.2:
+minimatch@^3.0.4, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^5.0.1, minimatch@^5.1.0:
+minimatch@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
   integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
@@ -4277,12 +4254,11 @@ typedoc-plugin-markdown@^3.1.1:
   dependencies:
     handlebars "^4.7.7"
 
-typedoc@^0.22.17:
-  version "0.22.17"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.22.17.tgz#bc51cc95f569040112504300831cdac4f8089b7b"
-  integrity sha512-h6+uXHVVCPDaANzjwzdsj9aePBjZiBTpiMpBBeyh1zcN2odVsDCNajz8zyKnixF93HJeGpl34j/70yoEE5BfNg==
+typedoc@^0.23.7:
+  version "0.23.7"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.23.7.tgz#e47a48801d6b9d0d6f787424fa63ed600c670387"
+  integrity sha512-Vl/Yh4KYBaxQQOYImBgLQDX61hfaA7XaP/DZVd/w7rQvaqLEsdQH6gEMK8CMjyHo0bSzVnNYwxtD1KPSENoWug==
   dependencies:
-    glob "^8.0.3"
     lunr "^2.3.9"
     marked "^4.0.16"
     minimatch "^5.1.0"
