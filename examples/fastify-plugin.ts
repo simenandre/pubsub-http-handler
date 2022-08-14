@@ -1,24 +1,26 @@
 import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import Fastify from 'fastify';
-import { PubSubHandler, pubSubFastifyPlugin } from '../src';
+import { z } from 'zod';
+import { pubSubFastifyPlugin } from '../src';
 
-interface HandlerArguments {
-  name: string;
-  party: {
-    name: string;
-  };
-  bookingId: string;
-}
+const inputData = z.object({
+  name: z.string(),
+  party: z.object({
+    name: z.string(),
+  }),
+  bookingId: z.string(),
+});
 
 const server = () => {
   const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
-  const handler: PubSubHandler<HandlerArguments> = ({ data, log }) => {
-    const { name, party, bookingId } = data;
-    log.info(`${name} from ${party.name} had a booking with id ${bookingId}`);
-  };
-
-  fastify.register(pubSubFastifyPlugin, { handler });
+  fastify.register(pubSubFastifyPlugin, {
+    parser: d => inputData.parse(d),
+    handler: ({ data, log }) => {
+      const { name, party, bookingId } = data;
+      log.info(`${name} from ${party.name} had a booking with id ${bookingId}`);
+    },
+  });
 
   fastify.server.listen(8000);
 };

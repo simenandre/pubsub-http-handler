@@ -14,8 +14,8 @@ export type CloudFunctionFun = (
   res: express.Response,
 ) => Promise<void>;
 
-export function createPubSubCloudFunctions<T = unknown>(
-  handler: PubSubHandler<T>,
+export function createPubSubCloudFunctions<Data = unknown, Context = unknown>(
+  handler: PubSubHandler<Data, Context>,
   options: PubSubCloudFunctionsConfig = {},
 ): CloudFunctionFun {
   const { parseJson, onError, logger } = options;
