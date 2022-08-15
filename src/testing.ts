@@ -1,4 +1,4 @@
-import { any, z } from 'zod';
+import { z } from 'zod';
 
 const inputData = z.object({
   name: z.string(),
@@ -7,8 +7,6 @@ const inputData = z.object({
   }),
   bookingId: z.string(),
 });
-
-type UndefinedToUnknown<T> = [T] extends [undefined] ? unknown : T;
 
 interface Hello<T> {
   handler: (data: T) => void;
