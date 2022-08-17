@@ -1,16 +1,12 @@
-import fastify, {
-  FastifyInstance,
-  FastifyPluginAsync,
-  FastifyRequest,
-} from 'fastify';
-import { z } from 'zod';
+import { FastifyInstance } from 'fastify';
+import fp from 'fastify-plugin';
 import { handlePubSubMessage } from '../common';
 import { PubSubConfig, PubSubRequest, PubSubRequestType } from '../types';
 
-export const pubSubFastifyPlugin = async <Data, Context>(
+export const pubSubFastifyPluginFn = async <Data, Context>(
   fastify: FastifyInstance,
   options: PubSubConfig<Data, Context>,
-) => {
+): Promise<void> => {
   const { path = '/', handler, parseJson, onError } = options;
   fastify.post<{
     Body: PubSubRequestType;
@@ -43,3 +39,8 @@ export const pubSubFastifyPlugin = async <Data, Context>(
     },
   );
 };
+
+export const pubSubFastifyPlugin = fp(pubSubFastifyPluginFn, {
+  name: 'pubsub-http-handler',
+  fastify: '4.x',
+});
