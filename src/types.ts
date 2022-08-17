@@ -15,7 +15,7 @@ export interface PubSubConfig<Data, Context> {
    */
   onError?: OnErrorHandler;
 
-  parser?: (data: unknown) => Data;
+  parser?: (data: unknown) => Data | Promise<Data>;
   /**
    * This will run JSON.parse on request data
    *
