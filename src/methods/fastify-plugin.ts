@@ -3,7 +3,7 @@ import fp from 'fastify-plugin';
 import { handlePubSubMessage } from '../common';
 import { PubSubConfig, PubSubRequest, PubSubRequestType } from '../types';
 
-export const pubSubFastifyPluginFn = async <Data, Context>(
+const pubSubFastifyPluginFn = async <Data, Context>(
   fastify: FastifyInstance,
   options: PubSubConfig<Data, Context>,
 ): Promise<void> => {
