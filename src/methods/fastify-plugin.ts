@@ -1,10 +1,16 @@
-import { FastifyPluginAsync, FastifyRequest } from 'fastify';
+import fastify, {
+  FastifyInstance,
+  FastifyPluginAsync,
+  FastifyRequest,
+} from 'fastify';
+import { z } from 'zod';
 import { handlePubSubMessage } from '../common';
 import { PubSubConfig, PubSubRequest, PubSubRequestType } from '../types';
 
-export const pubSubFastifyPlugin: FastifyPluginAsync<
-  PubSubConfig<any, any>
-> = async (fastify, options) => {
+export const pubSubFastifyPlugin = async <Data, Context>(
+  fastify: FastifyInstance,
+  options: PubSubConfig<Data, Context>,
+) => {
   const { path = '/', handler, parseJson, onError } = options;
   fastify.post<{
     Body: PubSubRequestType;
@@ -18,11 +24,11 @@ export const pubSubFastifyPlugin: FastifyPluginAsync<
     },
     async (req, reply) => {
       try {
-        const res = await handlePubSubMessage<FastifyRequest>({
+        const res = await handlePubSubMessage({
           message: req.body.message,
           handler,
           parseJson,
-          context: req,
+          // context: req,
           log: req.log,
         });
 

@@ -4,8 +4,8 @@ import { gcpLogOptions } from 'pino-cloud-logging';
 import { handlePubSubMessage } from '../common';
 import { PubSubConfig, PubSubHandler } from '../types';
 
-export interface PubSubCloudFunctionsConfig
-  extends Omit<PubSubConfig, 'handler' | 'path'> {
+export interface PubSubCloudFunctionsConfig<Data, Context>
+  extends Omit<PubSubConfig<Data, Context>, 'handler' | 'path'> {
   logger?: pino.LoggerOptions;
 }
 
@@ -16,7 +16,7 @@ export type CloudFunctionFun = (
 
 export function createPubSubCloudFunctions<Data = unknown, Context = unknown>(
   handler: PubSubHandler<Data, Context>,
-  options: PubSubCloudFunctionsConfig = {},
+  options: PubSubCloudFunctionsConfig<Data, Context> = {},
 ): CloudFunctionFun {
   const { parseJson, onError, logger } = options;
   return async (req, res): Promise<void> => {
