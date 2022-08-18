@@ -60,6 +60,11 @@ documentation][docs]
 - `parseJson` (boolean, default is `true`). When set to true, uses `JSON.parse`
   to parse the data sent through PubSub.
 
+- `parser` (function, optional). This option can be used to parse data coming
+  from PubSub. The function must return data (this data is passed to the
+  handler, as `data`). You can optionally throw an exception if the data could
+  not be parsed, which in turn can be caught by `onError` if you'd like.
+
 ## Contributing
 
 We love contributions! 🙏 Bug reports and pull requests are welcome on [GitHub].
