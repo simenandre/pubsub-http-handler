@@ -2,7 +2,8 @@ import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 import { PubSubConfig, PubSubHandler } from '../types';
 import { pubSubFastifyPlugin } from './fastify-plugin';
 
-export interface PubSubServerConfig extends Omit<PubSubConfig, 'handler'> {
+export interface PubSubServerConfig<Data, Context>
+  extends Omit<PubSubConfig<Data, Context>, 'handler'> {
   /**
    * Will automatically pick up PORT environment variable.
    * @default 8000
@@ -31,9 +32,9 @@ export interface CreatePubSubHandlerResponse {
   fastify: FastifyInstance;
 }
 
-export function createPubSubServer<T = unknown>(
-  handler: PubSubHandler<T>,
-  config: PubSubServerConfig = {},
+export function createPubSubServer<Data, Context>(
+  handler: PubSubHandler<Data, Context>,
+  config: PubSubServerConfig<Data, Context> = {},
 ): CreatePubSubHandlerResponse {
   let { host = '0.0.0.0' } = config;
   const {

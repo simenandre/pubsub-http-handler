@@ -1,11 +1,12 @@
 import { Static, Type } from '@sinclair/typebox';
 import { FastifyLoggerInstance } from 'fastify';
+import pino from 'pino';
 
-export interface PubSubConfig {
+export interface PubSubConfig<Data, Context> {
   /**
    * Handler
    */
-  handler: PubSubHandler;
+  handler: PubSubHandler<Data, Context>;
   /**
    * OnError Handler
    *
@@ -13,6 +14,8 @@ export interface PubSubConfig {
    * thrown.
    */
   onError?: OnErrorHandler;
+
+  parser?: (data: unknown) => Data | Promise<Data>;
   /**
    * This will run JSON.parse on request data
    *
@@ -20,6 +23,7 @@ export interface PubSubConfig {
    * @default true
    */
   parseJson?: boolean; // Defaults to true
+
   /**
    * Use this to set a different path
    * @default /
@@ -46,11 +50,20 @@ export class PubSubHandlerResponse {
   statusCode?: number;
 }
 
-export type PubSubHandler<T = any> = (args: {
+export type PubSubHandler<Data, Context> = (args: {
   message: PubSubMessageType;
-  data?: T;
-  context?: unknown;
+  data: Data;
+  context?: Context;
   log: FastifyLoggerInstance;
 }) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
 
 export type OnErrorHandler = (error: unknown) => void | Promise<void>;
+
+export interface HandlePubSubMessageArgs<Data, Context> {
+  message: PubSubMessageType;
+  handler: PubSubHandler<Data, Context>;
+  parseJson?: boolean;
+  parser?: (data: unknown) => Data;
+  context?: Context;
+  log?: pino.Logger;
+}
