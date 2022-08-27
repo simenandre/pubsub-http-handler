@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [4.3.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.3.0...v4.3.1) (2022-08-27)
+
+
+### Bug Fixes
+
+* add `FastifyBaseLogger` to supported loggers in handlePubSubMessage ([cc755b2](https://www.github.com/cobraz/pubsub-http-handler/commit/cc755b296af0116de47ddb1ba8fadf19f16db677))
+
 ## [4.3.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.2.0...v4.3.0) (2022-08-26)
 
 
