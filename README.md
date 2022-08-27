@@ -65,6 +65,11 @@ documentation][docs]
   handler, as `data`). You can optionally throw an exception if the data could
   not be parsed, which in turn can be caught by `onError` if you'd like.
 
+We export a function called `makePubSubConfig` to help with type inference. This
+is basicly a function that lets you return a function while using `parser`,
+which is returned in `handler`. If you know a way for the types to work without
+using a function like this, we would love a pull request!
+
 ## Contributing
 
 We love contributions! 🙏 Bug reports and pull requests are welcome on [GitHub].
