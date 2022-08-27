@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.3.0...v4.4.0) (2022-08-27)
+
+
+### Features
+
+* add `makePubSubConfig` to help with type inference ([#155](https://www.github.com/cobraz/pubsub-http-handler/issues/155)) ([00d086a](https://www.github.com/cobraz/pubsub-http-handler/commit/00d086aeb4483e0300fa42bef5249c04bf81bd4a))
+
+
+### Bug Fixes
+
+* add `FastifyBaseLogger` to supported loggers in handlePubSubMessage ([cc755b2](https://www.github.com/cobraz/pubsub-http-handler/commit/cc755b296af0116de47ddb1ba8fadf19f16db677))
+
 ## [4.3.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.2.0...v4.3.0) (2022-08-26)
 
 
