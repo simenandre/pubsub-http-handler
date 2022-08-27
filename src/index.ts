@@ -3,3 +3,4 @@ export * from './methods/fastify-plugin';
 export * from './methods/server';
 export * from './common';
 export * from './types';
+export * from './utils';
