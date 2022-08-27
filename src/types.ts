@@ -1,5 +1,5 @@
 import { Static, Type } from '@sinclair/typebox';
-import { FastifyLoggerInstance } from 'fastify';
+import { FastifyBaseLogger, FastifyLoggerInstance } from 'fastify';
 import pino from 'pino';
 
 export interface PubSubConfig<Data, Context> {
@@ -65,5 +65,5 @@ export interface HandlePubSubMessageArgs<Data, Context> {
   parseJson?: boolean;
   parser?: (data: unknown) => Data;
   context?: Context;
-  log?: pino.Logger;
+  log?: pino.Logger | FastifyBaseLogger;
 }
