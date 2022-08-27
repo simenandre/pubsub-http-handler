@@ -82,6 +82,7 @@ describe('index', () => {
         "createPubSubCloudFunctions": [Function],
         "createPubSubServer": [Function],
         "handlePubSubMessage": [Function],
+        "makePubSubConfig": [Function],
         "pubSubFastifyPlugin": [Function],
       }
     `);
