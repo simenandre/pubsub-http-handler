@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [4.4.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.4.0...v4.4.1) (2022-09-03)
+
+
+### Bug Fixes
+
+* parsing not working on fastify-plugin ([194aced](https://www.github.com/cobraz/pubsub-http-handler/commit/194aceda0e3a298d36173ed16ed3565efe269bec))
+
 ## [4.4.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.3.0...v4.4.0) (2022-08-27)
 
 
