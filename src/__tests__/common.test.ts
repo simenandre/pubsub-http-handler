@@ -75,17 +75,34 @@ describe('common', () => {
       message,
       handler,
       parser: data => parser(data),
-      context: { hello: 'there' },
       log: {} as pino.Logger,
     });
 
     expect(handler).toHaveBeenCalledWith({
       message,
       data: '',
-      context: { hello: 'there' },
       log: {} as pino.Logger,
     });
 
     expect(parser).toHaveBeenCalledWith({});
+  });
+
+  it('should throw when parser fails', async () => {
+    const message = createPubSubdata({}, true);
+    const handler = jest.fn();
+    const parser = jest.fn(_ => {
+      throw new Error('error');
+    });
+
+    const result = () => {
+      return handlePubSubMessage({
+        message,
+        handler,
+        parser: data => parser(data),
+        log: {} as pino.Logger,
+      });
+    };
+
+    expect(result).rejects.toThrowErrorMatchingInlineSnapshot(`"error"`);
   });
 });

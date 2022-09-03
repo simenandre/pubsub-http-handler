@@ -1,5 +1,6 @@
 import Fastify, { FastifyInstance } from 'fastify';
 import { pubSubFastifyPlugin } from '../methods/fastify-plugin';
+import { PubSubConfig } from '../types';
 import { createPubSubRequest } from './fixtures';
 
 describe('fastify-plugin', () => {
@@ -91,6 +92,31 @@ describe('fastify-plugin', () => {
 
     expect(res.payload).toMatchInlineSnapshot(
       `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"error\\"}"`,
+    );
+  });
+
+  it('should throw when parsing fails', async () => {
+    const handler = jest.fn(() => ({ hello: 'world' }));
+    const parser = jest.fn(() => {
+      throw new Error('parsing fail');
+    });
+    const payload = createPubSubRequest('forward me');
+
+    app.register(pubSubFastifyPlugin, { handler, parser } as PubSubConfig<
+      any,
+      any
+    >);
+
+    const res = await app.inject({
+      method: 'POST',
+      url: '/',
+      payload,
+    });
+
+    expect(parser).toHaveBeenCalled();
+
+    expect(res.payload).toMatchInlineSnapshot(
+      `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"parsing fail\\"}"`,
     );
   });
 

@@ -63,7 +63,7 @@ export interface HandlePubSubMessageArgs<Data, Context> {
   message: PubSubMessageType;
   handler: PubSubHandler<Data, Context>;
   parseJson?: boolean;
-  parser?: (data: unknown) => Data;
+  parser?: (data: unknown) => Data | Promise<Data>;
   context?: Context;
   log?: pino.Logger | FastifyBaseLogger;
 }

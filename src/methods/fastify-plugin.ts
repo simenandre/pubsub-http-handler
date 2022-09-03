@@ -7,7 +7,7 @@ const pubSubFastifyPluginFn = async <Data, Context>(
   fastify: FastifyInstance,
   options: PubSubConfig<Data, Context>,
 ): Promise<void> => {
-  const { path = '/', handler, parseJson, onError } = options;
+  const { path = '/', handler, parseJson, onError, parser } = options;
   fastify.post<{
     Body: PubSubRequestType;
   }>(
@@ -20,7 +20,8 @@ const pubSubFastifyPluginFn = async <Data, Context>(
     },
     async (req, reply) => {
       try {
-        const res = await handlePubSubMessage({
+        const res = await handlePubSubMessage<Data, Context>({
+          parser,
           message: req.body.message,
           handler,
           parseJson,
@@ -28,14 +29,13 @@ const pubSubFastifyPluginFn = async <Data, Context>(
           log: req.log,
         });
 
-        reply.code(res?.statusCode || 204);
+        return reply.code(res?.statusCode || 204).send();
       } catch (error) {
         if (onError) {
           await onError(error);
-          reply.code(204);
+          return reply.code(204).send();
         } else throw error;
       }
-      reply.send();
     },
   );
 };
