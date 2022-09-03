@@ -1,11 +1,11 @@
 import { createPubSubServer } from '../methods/server';
-import { createPubSubRequest } from './fixtures';
+import { makeMockPubSubMessage } from '../utils';
 
 describe('server', () => {
   it('should forward requests', async () => {
     jest.clearAllMocks();
     const handler = jest.fn();
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
     const server = createPubSubServer(handler);
 
     const res = await server.fastify.inject({

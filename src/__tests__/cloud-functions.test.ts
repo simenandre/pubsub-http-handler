@@ -1,12 +1,12 @@
 import { createPubSubCloudFunctions } from '../methods/cloud-functions';
-import { createPubSubRequest } from './fixtures';
 import type * as express from 'express';
+import { makeMockPubSubMessage } from '../utils';
 
 describe('cloud functions', () => {
   it('should forward requests', async () => {
     const handler = jest.fn();
     const send = jest.fn();
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
 
     const fun = createPubSubCloudFunctions(handler);
     await fun(
@@ -18,7 +18,7 @@ describe('cloud functions', () => {
   });
 
   it('should run onError when thrown', async () => {
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
     const handle = () => {
       throw new Error('error');
     };
@@ -34,7 +34,7 @@ describe('cloud functions', () => {
   });
 
   it('should throw when onError is undefined', async () => {
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
     const handle = () => {
       throw new Error('error');
     };

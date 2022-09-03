@@ -1,6 +1,6 @@
 import Fastify, { FastifyInstance } from 'fastify';
 import { pubSubFastifyPlugin } from '../methods/fastify-plugin';
-import { createPubSubRequest } from './fixtures';
+import { makeMockPubSubMessage } from '../utils';
 
 describe('fastify-plugin', () => {
   let app: FastifyInstance;
@@ -15,7 +15,7 @@ describe('fastify-plugin', () => {
 
   it('should forward requests', async () => {
     const handler = jest.fn();
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
 
     app.register(pubSubFastifyPlugin, { handler });
 
@@ -37,7 +37,7 @@ describe('fastify-plugin', () => {
 
   it('should forward statusCode', async () => {
     const handler = jest.fn(() => ({ statusCode: 404 }));
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
 
     app.register(pubSubFastifyPlugin, { handler });
 
@@ -62,7 +62,7 @@ describe('fastify-plugin', () => {
       throw new Error('error');
     };
     const onError = jest.fn();
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
 
     app.register(pubSubFastifyPlugin, { handler, onError });
 
@@ -79,7 +79,7 @@ describe('fastify-plugin', () => {
     const handler = () => {
       throw new Error('error');
     };
-    const payload = createPubSubRequest('forward me');
+    const payload = makeMockPubSubMessage('forward me');
 
     app.register(pubSubFastifyPlugin, { handler });
 
