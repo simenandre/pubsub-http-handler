@@ -1,16 +1,16 @@
-import { FastifyInstance } from 'fastify';
+import { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
+import { FastifyInstance, FastifyRequest } from 'fastify';
 import fp from 'fastify-plugin';
 import { handlePubSubMessage } from '../common';
-import { PubSubConfig, PubSubRequest, PubSubRequestType } from '../types';
+import { PubSubConfig, PubSubRequest } from '../types';
 
-const pubSubFastifyPluginFn = async <Data, Context>(
+const pubSubFastifyPluginFn = async <Data = unknown>(
   fastify: FastifyInstance,
-  options: PubSubConfig<Data, Context>,
+  options: PubSubConfig<Data, FastifyRequest>,
 ): Promise<void> => {
+  const fastifyTypeBox = fastify.withTypeProvider<TypeBoxTypeProvider>();
   const { path = '/', handler, parseJson, onError, parser } = options;
-  fastify.post<{
-    Body: PubSubRequestType;
-  }>(
+  fastifyTypeBox.post(
     path,
     {
       schema: {
@@ -20,21 +20,23 @@ const pubSubFastifyPluginFn = async <Data, Context>(
     },
     async (req, reply) => {
       try {
-        const res = await handlePubSubMessage<Data, Context>({
+        const res = await handlePubSubMessage<Data, FastifyRequest>({
           parser,
           message: req.body.message,
           handler,
           parseJson,
-          // context: req,
+          context: req,
           log: req.log,
         });
 
         return reply.code(res?.statusCode || 204).send();
       } catch (error) {
         if (onError) {
-          await onError(error);
+          await onError(error, req);
           return reply.code(204).send();
-        } else throw error;
+        } else {
+          throw error;
+        }
       }
     },
   );

@@ -13,7 +13,7 @@ export interface PubSubConfig<Data, Context> {
    * When this is set, errors will not be
    * thrown.
    */
-  onError?: OnErrorHandler;
+  onError?: OnErrorHandler<Context>;
 
   parser?: (data: unknown) => Data | Promise<Data>;
   /**
@@ -57,13 +57,16 @@ export type PubSubHandler<Data, Context> = (args: {
   log: FastifyLoggerInstance;
 }) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
 
-export type OnErrorHandler = (error: unknown) => void | Promise<void>;
+export type OnErrorHandler<Context> = (
+  error: unknown,
+  context: Context,
+) => void | Promise<void>;
 
 export interface HandlePubSubMessageArgs<Data, Context> {
   message: PubSubMessageType;
   handler: PubSubHandler<Data, Context>;
   parseJson?: boolean;
   parser?: (data: unknown) => Data | Promise<Data>;
-  context?: Context;
+  context: Context;
   log?: pino.Logger | FastifyBaseLogger;
 }

@@ -23,11 +23,13 @@ describe('common', () => {
       message,
       handler,
       parseJson: false,
+      context: {},
       log: {} as pino.Logger,
     });
     expect(handler).toHaveBeenCalledWith({
       message,
       data: 'hello-world',
+      context: {},
       log: {},
     });
   });
@@ -39,11 +41,13 @@ describe('common', () => {
       message,
       handler,
       parseJson: true,
+      context: {},
       log: {} as pino.Logger,
     });
     expect(handler).toHaveBeenCalledWith({
       message,
       data: { name: 'Simen' },
+      context: {},
       log: {},
     });
   });
@@ -75,12 +79,14 @@ describe('common', () => {
       message,
       handler,
       parser: data => parser(data),
+      context: {},
       log: {} as pino.Logger,
     });
 
     expect(handler).toHaveBeenCalledWith({
       message,
       data: '',
+      context: {},
       log: {} as pino.Logger,
     });
 
@@ -99,10 +105,11 @@ describe('common', () => {
         message,
         handler,
         parser: data => parser(data),
+        context: {},
         log: {} as pino.Logger,
       });
     };
 
-    expect(result).rejects.toThrowErrorMatchingInlineSnapshot(`"error"`);
+    await expect(result).rejects.toThrowErrorMatchingInlineSnapshot(`"error"`);
   });
 });

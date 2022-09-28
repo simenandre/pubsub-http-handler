@@ -30,7 +30,7 @@ describe('cloud functions', () => {
       { status: () => ({ send }) } as unknown as any,
     );
 
-    expect(onError).toHaveBeenCalledWith(new Error('error'));
+    expect(onError).toHaveBeenCalledWith(new Error('error'), payload);
   });
 
   it('should throw when onError is undefined', async () => {

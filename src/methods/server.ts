@@ -1,4 +1,8 @@
-import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
+import Fastify, {
+  FastifyInstance,
+  FastifyRequest,
+  FastifyServerOptions,
+} from 'fastify';
 import { PubSubConfig, PubSubHandler } from '../types';
 import { pubSubFastifyPlugin } from './fastify-plugin';
 
@@ -32,9 +36,9 @@ export interface CreatePubSubHandlerResponse {
   fastify: FastifyInstance;
 }
 
-export function createPubSubServer<Data, Context>(
-  handler: PubSubHandler<Data, Context>,
-  config: PubSubServerConfig<Data, Context> = {},
+export function createPubSubServer<Data>(
+  handler: PubSubHandler<Data, FastifyRequest>,
+  config: PubSubServerConfig<Data, FastifyRequest> = {},
 ): CreatePubSubHandlerResponse {
   let { host = '0.0.0.0' } = config;
   const {

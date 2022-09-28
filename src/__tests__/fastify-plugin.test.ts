@@ -73,7 +73,10 @@ describe('fastify-plugin', () => {
       payload,
     });
 
-    expect(onError).toHaveBeenCalledWith(new Error('error'));
+    expect(onError).toHaveBeenCalledWith(
+      new Error('error'),
+      expect.objectContaining({ body: payload }),
+    );
   });
 
   it('should not return onError on throw', async () => {
