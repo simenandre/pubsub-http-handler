@@ -2013,9 +2013,9 @@ fast-uri@^2.0.0, fast-uri@^2.1.0:
   integrity sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==
 
 fastify-plugin@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.0.tgz#fb28ec08312777ad343059177f13277ca3e7c3b1"
-  integrity sha512-hovKzEXZc2YgeuXn41/2EA/IaIOdRu1pB9WKgnzDBj3lhKSdDCEsckHa7I6LiT/LhflvAQX7ZY8IQ6eBX0htTg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.1.tgz#4b80020957938dbc44b8ad4a898fd8bcfbab3f65"
+  integrity sha512-dlGKiwLzRBKkEf5J5ho0uAD/Jdv8GQVUbriB3tAX3ehRUXE4gTV3lRd5inEg9li1aLzb0EGj8y2K4/8g1TN06g==
 
 fastify@^4.0.1:
   version "4.5.3"
@@ -3569,9 +3569,9 @@ pino-std-serializers@^6.0.0:
   integrity sha512-mMMOwSKrmyl+Y12Ri2xhH1lbzQxwwpuru9VjyJpgFIH4asSj88F2csdMwN6+M5g1Ll4rmsYghHLQJw81tgZ7LQ==
 
 pino@^8.0.0:
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/pino/-/pino-8.4.2.tgz#5de76e81b36e173d74244e0af4543e7ae241dbfd"
-  integrity sha512-PlXDeGhJZfAuVay+wtlS02s5j8uisQveZExYdAm9MwwxUQSz9R7Q78XtjM2tTa4sa5KJmygimZjZxXXuHgV6ew==
+  version "8.6.1"
+  resolved "https://registry.yarnpkg.com/pino/-/pino-8.6.1.tgz#3fc43acc79bcd3e871670347854f7359e2612f10"
+  integrity sha512-fi+V2K98eMZjQ/uEHHSiMALNrz7HaFdKNYuyA3ZUrbH0f1e8sPFDmeRGzg7ZH2q4QDxGnJPOswmqlEaTAZeDPA==
   dependencies:
     atomic-sleep "^1.0.0"
     fast-redact "^3.1.1"
