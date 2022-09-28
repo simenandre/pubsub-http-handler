@@ -771,9 +771,9 @@
     "@types/range-parser" "*"
 
 "@types/express@^4.17.13":
-  version "4.17.13"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.13.tgz#a76e2995728999bab51a33fabce1d705a3709034"
-  integrity sha512-6bSZTPaTIACxn48l50SR+axgrqm6qXFIxrdAKaG6PaJk3+zuUr35hBlgT7vOmJcum+OEaIBLtHV/qloEAFITeA==
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.14.tgz#143ea0557249bc1b3b54f15db4c81c3d4eb3569c"
+  integrity sha512-TEbt+vaPFQ+xpxFLFssxUDXj5cWCxZJjIcB7Yg0k0GMHGtgtQgpvx/MUQUeAkNbA9AAGrwkAsoeItdTgS7FMyg==
   dependencies:
     "@types/body-parser" "*"
     "@types/express-serve-static-core" "^4.17.18"
@@ -2013,9 +2013,9 @@ fast-uri@^2.0.0, fast-uri@^2.1.0:
   integrity sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==
 
 fastify-plugin@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.0.tgz#fb28ec08312777ad343059177f13277ca3e7c3b1"
-  integrity sha512-hovKzEXZc2YgeuXn41/2EA/IaIOdRu1pB9WKgnzDBj3lhKSdDCEsckHa7I6LiT/LhflvAQX7ZY8IQ6eBX0htTg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.2.1.tgz#4b80020957938dbc44b8ad4a898fd8bcfbab3f65"
+  integrity sha512-dlGKiwLzRBKkEf5J5ho0uAD/Jdv8GQVUbriB3tAX3ehRUXE4gTV3lRd5inEg9li1aLzb0EGj8y2K4/8g1TN06g==
 
 fastify@^4.0.1:
   version "4.5.3"
