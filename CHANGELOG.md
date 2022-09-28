@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [4.5.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.5.0...v4.5.1) (2022-09-28)
+
+
+### Bug Fixes
+
+* revert bump @sinclair/typebox from 0.24.28 to 0.24.43 ([#182](https://www.github.com/cobraz/pubsub-http-handler/issues/182)) ([ee35c8d](https://www.github.com/cobraz/pubsub-http-handler/commit/ee35c8dea80b83b037f98365b6fc923b7d24590c))
+
 ## [4.5.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.4.1...v4.5.0) (2022-09-28)
 
 
