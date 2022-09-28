@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.4.1...v4.5.0) (2022-09-28)
+
+
+### Features
+
+* always provide `context` argument ([#178](https://www.github.com/cobraz/pubsub-http-handler/issues/178)) ([3fcb9e5](https://www.github.com/cobraz/pubsub-http-handler/commit/3fcb9e53c543860184841f2c354fbe96718724af))
+
 ### [4.4.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.4.0...v4.4.1) (2022-09-03)
 
 
