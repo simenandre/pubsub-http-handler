@@ -1,6 +1,13 @@
 [pubsub-http-handler](../README.md) / PubSubConfig
 
-# Interface: PubSubConfig
+# Interface: PubSubConfig<Data, Context\>
+
+## Type parameters
+
+| Name      |
+| :-------- |
+| `Data`    |
+| `Context` |
 
 ## Table of contents
 
@@ -9,36 +16,37 @@
 - [handler](PubSubConfig.md#handler)
 - [onError](PubSubConfig.md#onerror)
 - [parseJson](PubSubConfig.md#parsejson)
+- [parser](PubSubConfig.md#parser)
 - [path](PubSubConfig.md#path)
 
 ## Properties
 
 ### handler
 
-• **handler**: [`PubSubHandler`](../README.md#pubsubhandler)<`any`\>
+• **handler**: [`PubSubHandler`](../README.md#pubsubhandler)<`Data`, `Context`\>
 
 Handler
 
 #### Defined in
 
-[types.ts:8](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L8)
+[src/types.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L9)
 
-___
+---
 
 ### onError
 
-• `Optional` **onError**: [`OnErrorHandler`](../README.md#onerrorhandler)
+• `Optional` **onError**:
+[`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
 
 OnError Handler
 
-When this is set, errors will not be
-thrown.
+When this is set, errors will not be thrown.
 
 #### Defined in
 
-[types.ts:15](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L15)
+[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L16)
 
-___
+---
 
 ### parseJson
 
@@ -48,13 +56,39 @@ This will run JSON.parse on request data
 
 **Tip**: `false` when sending strings
 
-**`default`** true
+**`Default`**
+
+true
 
 #### Defined in
 
-[types.ts:22](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L22)
+[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L25)
 
-___
+---
+
+### parser
+
+• `Optional` **parser**: (`data`: `unknown`) => `Data` \| `Promise`<`Data`\>
+
+#### Type declaration
+
+▸ (`data`): `Data` \| `Promise`<`Data`\>
+
+##### Parameters
+
+| Name   | Type      |
+| :----- | :-------- |
+| `data` | `unknown` |
+
+##### Returns
+
+`Data` \| `Promise`<`Data`\>
+
+#### Defined in
+
+[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L18)
+
+---
 
 ### path
 
@@ -62,8 +96,10 @@ ___
 
 Use this to set a different path
 
-**`default`** /
+**`Default`**
+
+/
 
 #### Defined in
 
-[types.ts:27](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L27)
+[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L31)

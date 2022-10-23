@@ -1,5 +1,5 @@
 import { Static, Type } from '@sinclair/typebox';
-import { FastifyBaseLogger, FastifyLoggerInstance } from 'fastify';
+import { FastifyBaseLogger } from 'fastify';
 import pino from 'pino';
 
 export interface PubSubConfig<Data, Context> {
@@ -54,7 +54,7 @@ export type PubSubHandler<Data, Context> = (args: {
   message: PubSubMessageType;
   data: Data;
   context?: Context;
-  log: FastifyLoggerInstance;
+  log: FastifyBaseLogger;
 }) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
 
 export type OnErrorHandler<Context> = (
