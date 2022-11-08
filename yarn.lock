@@ -4305,9 +4305,9 @@ typedoc-plugin-markdown@^3.1.1:
     handlebars "^4.7.7"
 
 typedoc@^0.23.7:
-  version "0.23.11"
-  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.23.11.tgz#eacdc389038efd6de40a3c4561c413ad00f1ab16"
-  integrity sha512-FhZ2HfqlS++53UwHk4txCsTrTlpYR0So/0osMyBeP1E7llRNRqycJGfYK1qx9Wvvv5VO8tGdpwzOwDW5FrTi7A==
+  version "0.23.20"
+  resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.23.20.tgz#c6fa221762322837161932990b79416afcdc895c"
+  integrity sha512-nfb4Mx05ZZZXux3zPcLuc7+3TVePDW3jTdEBqXdQzJUyEILxoprgPIiTChbvci9crkqNJG9YESmfCptuh9Gn3g==
   dependencies:
     lunr "^2.3.9"
     marked "^4.0.19"
