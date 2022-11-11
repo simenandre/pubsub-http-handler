@@ -24,7 +24,7 @@ describe('cloud functions', () => {
     };
     const onError = jest.fn();
     const send = jest.fn();
-    const fun = await createPubSubCloudFunctions(handle, { onError });
+    const fun = createPubSubCloudFunctions(handle, { onError });
     await fun(
       { body: payload } as any,
       { status: () => ({ send }) } as unknown as any,
@@ -39,11 +39,37 @@ describe('cloud functions', () => {
       throw new Error('error');
     };
     const send = jest.fn();
-    const fun = await createPubSubCloudFunctions(handle);
+    const fun = createPubSubCloudFunctions(handle);
 
     await fun(
       { body: payload } as any,
       { status: () => ({ send }) } as unknown as any,
     ).catch(e => expect(e.message).toBe('error'));
+  });
+
+  it('should return 200 by default', async () => {
+    const payload = createPubSubRequest('forward me');
+    const handle = () => {};
+    const send = jest.fn();
+    const statusFun = jest.fn(() => ({ send }));
+    const fun = createPubSubCloudFunctions(handle);
+
+    await fun({ body: payload } as any, { status: statusFun } as any);
+
+    expect(statusFun).toBeCalledTimes(1);
+    expect(statusFun).toHaveBeenCalledWith(200);
+  });
+
+  it('should return status code of handler', async () => {
+    const payload = createPubSubRequest('forward me');
+    const handle = () => ({ statusCode: 123 });
+    const send = jest.fn();
+    const statusFun = jest.fn(() => ({ send }));
+    const fun = createPubSubCloudFunctions(handle);
+
+    await fun({ body: payload } as any, { status: statusFun } as any);
+
+    expect(statusFun).toBeCalledTimes(1);
+    expect(statusFun).toHaveBeenCalledWith(123);
   });
 });

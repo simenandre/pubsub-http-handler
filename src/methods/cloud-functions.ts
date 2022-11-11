@@ -22,7 +22,7 @@ export function createPubSubCloudFunctions<Data = unknown, Context = unknown>(
   return async (req, res): Promise<void> => {
     const context: Context = req.body;
     try {
-      await handlePubSubMessage({
+      const result = await handlePubSubMessage({
         message: req.body.message,
         handler,
         context,
@@ -30,7 +30,7 @@ export function createPubSubCloudFunctions<Data = unknown, Context = unknown>(
         log: pino(gcpLogOptions(logger)),
       });
 
-      res.status(200).send();
+      res.status(result?.statusCode ?? 200).send();
     } catch (error) {
       if (onError) {
         await onError(error, context);
