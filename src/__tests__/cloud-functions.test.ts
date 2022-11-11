@@ -47,7 +47,7 @@ describe('cloud functions', () => {
     ).catch(e => expect(e.message).toBe('error'));
   });
 
-  it('should return 200 by default', async () => {
+  it('should return 204 by default', async () => {
     const payload = createPubSubRequest('forward me');
     const handle = () => {};
     const send = jest.fn();
@@ -57,7 +57,7 @@ describe('cloud functions', () => {
     await fun({ body: payload } as any, { status: statusFun } as any);
 
     expect(statusFun).toBeCalledTimes(1);
-    expect(statusFun).toHaveBeenCalledWith(200);
+    expect(statusFun).toHaveBeenCalledWith(204);
   });
 
   it('should return status code of handler', async () => {

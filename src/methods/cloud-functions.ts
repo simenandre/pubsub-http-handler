@@ -30,11 +30,11 @@ export function createPubSubCloudFunctions<Data = unknown, Context = unknown>(
         log: pino(gcpLogOptions(logger)),
       });
 
-      res.status(result?.statusCode ?? 200).send();
+      res.status(result?.statusCode ?? 204).send();
     } catch (error) {
       if (onError) {
         await onError(error, context);
-        res.status(200).send();
+        res.status(204).send();
       } else {
         throw error;
       }
