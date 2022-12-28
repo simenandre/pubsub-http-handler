@@ -1,10 +1,17 @@
 [pubsub-http-handler](../README.md) / PubSubServerConfig
 
-# Interface: PubSubServerConfig
+# Interface: PubSubServerConfig<Data, Context\>
+
+## Type parameters
+
+| Name      |
+| :-------- |
+| `Data`    |
+| `Context` |
 
 ## Hierarchy
 
-- `Omit`<[`PubSubConfig`](PubSubConfig.md), ``"handler"``\>
+- `Omit`<[`PubSubConfig`](PubSubConfig.md)<`Data`, `Context`\>, `"handler"`\>
 
   ↳ **`PubSubServerConfig`**
 
@@ -17,6 +24,7 @@
 - [host](PubSubServerConfig.md#host)
 - [onError](PubSubServerConfig.md#onerror)
 - [parseJson](PubSubServerConfig.md#parsejson)
+- [parser](PubSubServerConfig.md#parser)
 - [path](PubSubServerConfig.md#path)
 - [port](PubSubServerConfig.md#port)
 
@@ -26,48 +34,55 @@
 
 • `Optional` **address**: `string`
 
-**`default`** 0.0.0.0
+**`Default`**
 
-**`deprecated`** `address` will be removed in next major release. Please use `host` instead.
+0.0.0.0
+
+**`Deprecated`**
+
+`address` will be removed in next major release. Please use `host` instead.
 
 #### Defined in
 
-[methods/server.ts:22](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L22)
+[src/methods/server.ts:26](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L26)
 
-___
+---
 
 ### fastifyConfig
 
-• `Optional` **fastifyConfig**: `FastifyServerOptions`<`Server`, `FastifyLoggerInstance`\>
+• `Optional` **fastifyConfig**: `FastifyServerOptions`<`Server`,
+`FastifyBaseLogger`\>
 
 Read more here: https://www.fastify.io/docs/latest/Server/
 
 #### Defined in
 
-[methods/server.ts:27](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L27)
+[src/methods/server.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L31)
 
-___
+---
 
 ### host
 
 • `Optional` **host**: `string`
 
-**`default`** 0.0.0.0
+**`Default`**
+
+0.0.0.0
 
 #### Defined in
 
-[methods/server.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L16)
+[src/methods/server.ts:20](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L20)
 
-___
+---
 
 ### onError
 
-• `Optional` **onError**: [`OnErrorHandler`](../README.md#onerrorhandler)
+• `Optional` **onError**:
+[`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
 
 OnError Handler
 
-When this is set, errors will not be
-thrown.
+When this is set, errors will not be thrown.
 
 #### Inherited from
 
@@ -75,9 +90,9 @@ Omit.onError
 
 #### Defined in
 
-[types.ts:15](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L15)
+[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L16)
 
-___
+---
 
 ### parseJson
 
@@ -87,7 +102,9 @@ This will run JSON.parse on request data
 
 **Tip**: `false` when sending strings
 
-**`default`** true
+**`Default`**
+
+true
 
 #### Inherited from
 
@@ -95,9 +112,37 @@ Omit.parseJson
 
 #### Defined in
 
-[types.ts:22](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L22)
+[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L25)
 
-___
+---
+
+### parser
+
+• `Optional` **parser**: (`data`: `unknown`) => `Data` \| `Promise`<`Data`\>
+
+#### Type declaration
+
+▸ (`data`): `Data` \| `Promise`<`Data`\>
+
+##### Parameters
+
+| Name   | Type      |
+| :----- | :-------- |
+| `data` | `unknown` |
+
+##### Returns
+
+`Data` \| `Promise`<`Data`\>
+
+#### Inherited from
+
+Omit.parser
+
+#### Defined in
+
+[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L18)
+
+---
 
 ### path
 
@@ -105,7 +150,9 @@ ___
 
 Use this to set a different path
 
-**`default`** /
+**`Default`**
+
+/
 
 #### Inherited from
 
@@ -113,9 +160,9 @@ Omit.path
 
 #### Defined in
 
-[types.ts:27](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/types.ts#L27)
+[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L31)
 
-___
+---
 
 ### port
 
@@ -123,8 +170,10 @@ ___
 
 Will automatically pick up PORT environment variable.
 
-**`default`** 8000
+**`Default`**
+
+8000
 
 #### Defined in
 
-[methods/server.ts:11](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L11)
+[src/methods/server.ts:15](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L15)

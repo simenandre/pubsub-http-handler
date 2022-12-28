@@ -7,31 +7,33 @@
 ### Properties
 
 - [fastify](CreatePubSubHandlerResponse.md#fastify)
-
-### Methods
-
 - [listen](CreatePubSubHandlerResponse.md#listen)
 
 ## Properties
 
 ### fastify
 
-• **fastify**: `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`, `FastifyLoggerInstance`, `FastifyTypeProviderDefault`\>
+• **fastify**: `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`,
+`FastifyBaseLogger`, `FastifyTypeProviderDefault`\>
 
 #### Defined in
 
-[methods/server.ts:32](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L32)
+[src/methods/server.ts:36](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L36)
 
-## Methods
+---
 
 ### listen
 
-▸ **listen**(): `Promise`<`void`\>
+• **listen**: () => `Promise`<`void`\>
 
-#### Returns
+#### Type declaration
+
+▸ (): `Promise`<`void`\>
+
+##### Returns
 
 `Promise`<`void`\>
 
 #### Defined in
 
-[methods/server.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/d14dfe1/src/methods/server.ts#L31)
+[src/methods/server.ts:35](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L35)
