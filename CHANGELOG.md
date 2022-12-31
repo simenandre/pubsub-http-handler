@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.5.1...v4.6.0) (2022-12-31)
+
+
+### Features
+
+* Replaced type usage ([#196](https://www.github.com/cobraz/pubsub-http-handler/issues/196)) ([4612555](https://www.github.com/cobraz/pubsub-http-handler/commit/46125551c87a5b31bfe2b42126581b28c07f4079))
+
+
+### Bug Fixes
+
+* Use handler return value as status in cloud functions ([#201](https://www.github.com/cobraz/pubsub-http-handler/issues/201)) ([2334327](https://www.github.com/cobraz/pubsub-http-handler/commit/23343276582a01252b13a3546e570e2cf55bddaa))
+
 ### [4.5.1](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.5.0...v4.5.1) (2022-09-28)
 
 
