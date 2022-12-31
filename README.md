@@ -77,7 +77,7 @@ We love contributions! 🙏 Bug reports and pull requests are welcome on [GitHub
 [banner]: ./assets/banner.jpg
 [npm]: https://www.npmjs.com/package/pubsub-http-handler
 [build-badge]:
-  https://img.shields.io/github/workflow/status/cobraz/pubsub-http-handler/Release?style=flat-square
+  https://img.shields.io/github/actions/workflow/status/cobraz/pubsub-http-handler/workflow.yml?branch=main&style=flat-square
 [codeclimate-badge]:
   https://img.shields.io/codeclimate/maintainability/cobraz/pubsub-http-handler?style=flat-square
 [codeclimate]:
