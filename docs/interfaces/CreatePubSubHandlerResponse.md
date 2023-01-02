@@ -13,14 +13,13 @@
 
 ### fastify
 
-• **fastify**: `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`,
-`FastifyBaseLogger`, `FastifyTypeProviderDefault`\>
+• **fastify**: `FastifyInstance`<`RawServerDefault`, `IncomingMessage`, `ServerResponse`<`IncomingMessage`\>, `FastifyBaseLogger`, `FastifyTypeProviderDefault`\>
 
 #### Defined in
 
-[src/methods/server.ts:36](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L36)
+[src/methods/server.ts:36](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L36)
 
----
+___
 
 ### listen
 
@@ -36,4 +35,4 @@
 
 #### Defined in
 
-[src/methods/server.ts:35](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L35)
+[src/methods/server.ts:35](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L35)

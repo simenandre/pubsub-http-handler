@@ -41,8 +41,7 @@ pubsub-http-handler
 
 ### CloudFunctionFun
 
-Ƭ **CloudFunctionFun**: (`req`: `express.Request`, `res`: `express.Response`) =>
-`Promise`<`void`\>
+Ƭ **CloudFunctionFun**: (`req`: `express.Request`, `res`: `express.Response`) => `Promise`<`void`\>
 
 #### Type declaration
 
@@ -50,9 +49,9 @@ pubsub-http-handler
 
 ##### Parameters
 
-| Name  | Type               |
-| :---- | :----------------- |
-| `req` | `express.Request`  |
+| Name | Type |
+| :------ | :------ |
+| `req` | `express.Request` |
 | `res` | `express.Response` |
 
 ##### Returns
@@ -61,19 +60,18 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/methods/cloud-functions.ts:12](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/cloud-functions.ts#L12)
+[src/methods/cloud-functions.ts:12](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/cloud-functions.ts#L12)
 
----
+___
 
 ### OnErrorHandler
 
-Ƭ **OnErrorHandler**<`Context`\>: (`error`: `unknown`, `context`: `Context`) =>
-`void` \| `Promise`<`void`\>
+Ƭ **OnErrorHandler**<`Context`\>: (`error`: `unknown`, `context`: `Context`) => `void` \| `Promise`<`void`\>
 
 #### Type parameters
 
-| Name      |
-| :-------- |
+| Name |
+| :------ |
 | `Context` |
 
 #### Type declaration
@@ -82,9 +80,9 @@ pubsub-http-handler
 
 ##### Parameters
 
-| Name      | Type      |
-| :-------- | :-------- |
-| `error`   | `unknown` |
+| Name | Type |
+| :------ | :------ |
+| `error` | `unknown` |
 | `context` | `Context` |
 
 ##### Returns
@@ -93,119 +91,101 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/types.ts:60](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L60)
+[src/types.ts:60](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L60)
 
----
+___
 
 ### PubSubHandler
 
-Ƭ **PubSubHandler**<`Data`, `Context`\>: (`args`: { `context?`: `Context` ;
-`data`: `Data` ; `log`: `FastifyBaseLogger` ; `message`:
-[`PubSubMessageType`](README.md#pubsubmessagetype) }) =>
-`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`
+Ƭ **PubSubHandler**<`Data`, `Context`\>: (`args`: { `context?`: `Context` ; `data`: `Data` ; `log`: `FastifyBaseLogger` ; `message`: [`PubSubMessageType`](README.md#pubsubmessagetype)  }) => `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
 
 #### Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 #### Type declaration
 
-▸ (`args`):
-`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`
+▸ (`args`): `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
 
 ##### Parameters
 
-| Name            | Type                                               |
-| :-------------- | :------------------------------------------------- |
-| `args`          | `Object`                                           |
-| `args.context?` | `Context`                                          |
-| `args.data`     | `Data`                                             |
-| `args.log`      | `FastifyBaseLogger`                                |
-| `args.message`  | [`PubSubMessageType`](README.md#pubsubmessagetype) |
+| Name | Type |
+| :------ | :------ |
+| `args` | `Object` |
+| `args.context?` | `Context` |
+| `args.data` | `Data` |
+| `args.log` | `FastifyBaseLogger` |
+| `args.message` | [`PubSubMessageType`](README.md#pubsubmessagetype) |
 
 ##### Returns
 
-`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`
+`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\> \| [`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`
 
 #### Defined in
 
-[src/types.ts:53](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L53)
+[src/types.ts:53](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L53)
 
----
+___
 
 ### PubSubMessageType
 
-Ƭ **PubSubMessageType**: `Static`<typeof
-[`PubSubMessage`](README.md#pubsubmessage)\>
+Ƭ **PubSubMessageType**: `Static`<typeof [`PubSubMessage`](README.md#pubsubmessage)\>
 
 #### Defined in
 
-[src/types.ts:40](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L40)
+[src/types.ts:40](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L40)
 
----
+___
 
 ### PubSubRequestType
 
-Ƭ **PubSubRequestType**: `Static`<typeof
-[`PubSubRequest`](README.md#pubsubrequest)\>
+Ƭ **PubSubRequestType**: `Static`<typeof [`PubSubRequest`](README.md#pubsubrequest)\>
 
 #### Defined in
 
-[src/types.ts:47](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L47)
+[src/types.ts:47](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L47)
 
 ## Variables
 
 ### PubSubMessage
 
-• `Const` **PubSubMessage**: `TObject`<{ `attributes`:
-`TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ;
-`messageId`: `TOptional`<`TString`\> }\>
+• `Const` **PubSubMessage**: `TObject`<{ `attributes`: `TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ; `messageId`: `TOptional`<`TString`\>  }\>
 
 #### Defined in
 
-[src/types.ts:34](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L34)
+[src/types.ts:34](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L34)
 
----
+___
 
 ### PubSubRequest
 
-• `Const` **PubSubRequest**: `TObject`<{ `message`: `TObject`<{ `attributes`:
-`TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ;
-`messageId`: `TOptional`<`TString`\> }\> = PubSubMessage; `subscription`:
-`TString` }\>
+• `Const` **PubSubRequest**: `TObject`<{ `message`: `TObject`<{ `attributes`: `TOptional`<`TRecord`<`TString`, `TString`\>\> ; `data`: `TString` ; `messageId`: `TOptional`<`TString`\>  }\> = PubSubMessage; `subscription`: `TString`  }\>
 
 #### Defined in
 
-[src/types.ts:42](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L42)
+[src/types.ts:42](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L42)
 
 ## Functions
 
 ### createPubSubCloudFunctions
 
-▸ **createPubSubCloudFunctions**<`Data`, `Context`\>(`handler`, `options?`):
-[`CloudFunctionFun`](README.md#cloudfunctionfun)
+▸ **createPubSubCloudFunctions**<`Data`, `Context`\>(`handler`, `options?`): [`CloudFunctionFun`](README.md#cloudfunctionfun)
 
 #### Type parameters
 
-| Name      | Type      |
-| :-------- | :-------- |
-| `Data`    | `unknown` |
+| Name | Type |
+| :------ | :------ |
+| `Data` | `unknown` |
 | `Context` | `unknown` |
 
 #### Parameters
 
-| Name      | Type                                                                                         |
-| :-------- | :------------------------------------------------------------------------------------------- |
-| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`Data`, `Context`\>                               |
+| Name | Type |
+| :------ | :------ |
+| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`Data`, `Context`\> |
 | `options` | [`PubSubCloudFunctionsConfig`](interfaces/PubSubCloudFunctionsConfig.md)<`Data`, `Context`\> |
 
 #### Returns
@@ -214,27 +194,26 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/methods/cloud-functions.ts:17](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/cloud-functions.ts#L17)
+[src/methods/cloud-functions.ts:17](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/cloud-functions.ts#L17)
 
----
+___
 
 ### createPubSubServer
 
-▸ **createPubSubServer**<`Data`\>(`handler`, `config?`):
-[`CreatePubSubHandlerResponse`](interfaces/CreatePubSubHandlerResponse.md)
+▸ **createPubSubServer**<`Data`\>(`handler`, `config?`): [`CreatePubSubHandlerResponse`](interfaces/CreatePubSubHandlerResponse.md)
 
 #### Type parameters
 
-| Name   |
-| :----- |
+| Name |
+| :------ |
 | `Data` |
 
 #### Parameters
 
-| Name      | Type                                                                                                                                                                                                                                                                                                                            |
-| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `Server`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\>               |
-| `config`  | [`PubSubServerConfig`](interfaces/PubSubServerConfig.md)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `Server`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\> |
+| Name | Type |
+| :------ | :------ |
+| `handler` | [`PubSubHandler`](README.md#pubsubhandler)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `RawServerDefault`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\> |
+| `config` | [`PubSubServerConfig`](interfaces/PubSubServerConfig.md)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `RawServerDefault`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\> |
 
 #### Returns
 
@@ -242,56 +221,52 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/methods/server.ts:39](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/server.ts#L39)
+[src/methods/server.ts:39](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L39)
 
----
+___
 
 ### handlePubSubMessage
 
-▸ **handlePubSubMessage**<`Data`, `Context`\>(`args`):
-`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`\>
+▸ **handlePubSubMessage**<`Data`, `Context`\>(`args`): `Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\>
 
 #### Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 #### Parameters
 
-| Name   | Type                                                                                   |
-| :----- | :------------------------------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `args` | [`HandlePubSubMessageArgs`](interfaces/HandlePubSubMessageArgs.md)<`Data`, `Context`\> |
 
 #### Returns
 
-`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \|
-`void`\>
+`Promise`<[`PubSubHandlerResponse`](classes/PubSubHandlerResponse.md) \| `void`\>
 
 #### Defined in
 
-[src/common.ts:5](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/common.ts#L5)
+[src/common.ts:5](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/common.ts#L5)
 
----
+___
 
 ### makePubSubConfig
 
-▸ **makePubSubConfig**<`Data`, `Context`\>(`data`):
-[`PubSubConfig`](interfaces/PubSubConfig.md)<`Data`, `Context`\>
+▸ **makePubSubConfig**<`Data`, `Context`\>(`data`): [`PubSubConfig`](interfaces/PubSubConfig.md)<`Data`, `Context`\>
 
 #### Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 #### Parameters
 
-| Name   | Type                                                             |
-| :----- | :--------------------------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | [`PubSubConfig`](interfaces/PubSubConfig.md)<`Data`, `Context`\> |
 
 #### Returns
@@ -300,9 +275,9 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/utils.ts:3](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/utils.ts#L3)
+[src/utils.ts:3](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/utils.ts#L3)
 
----
+___
 
 ### pubSubFastifyPlugin
 
@@ -310,22 +285,20 @@ pubsub-http-handler
 
 FastifyPluginAsync
 
-Fastify allows the user to extend its functionalities with plugins. A plugin can
-be a set of routes, a server decorator or whatever. To activate plugins, use the
-`fastify.register()` method.
+Fastify allows the user to extend its functionalities with plugins. A plugin can be a set of routes, a server decorator or whatever. To activate plugins, use the `fastify.register()` method.
 
 #### Type parameters
 
-| Name   | Type      |
-| :----- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `Data` | `unknown` |
 
 #### Parameters
 
-| Name       | Type                                                                                                                                                                                                                                                                                                                |
-| :--------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `instance` | `FastifyInstance`<`Server`, `IncomingMessage`, `ServerResponse`, `FastifyBaseLogger`, `FastifyTypeProviderDefault`\>                                                                                                                                                                                                |
-| `opts`     | [`PubSubConfig`](interfaces/PubSubConfig.md)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `Server`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\> |
+| Name | Type |
+| :------ | :------ |
+| `instance` | `FastifyInstance`<`RawServerDefault`, `IncomingMessage`, `ServerResponse`<`IncomingMessage`\>, `FastifyBaseLogger`, `FastifyTypeProviderDefault`\> |
+| `opts` | [`PubSubConfig`](interfaces/PubSubConfig.md)<`Data`, `FastifyRequest`<`RouteGenericInterface`, `RawServerDefault`, `IncomingMessage`, `FastifySchema`, `FastifyTypeProviderDefault`, `unknown`, `FastifyBaseLogger`, `ResolveFastifyRequestType`<`FastifyTypeProviderDefault`, `FastifySchema`, `RouteGenericInterface`\>\>\> |
 
 #### Returns
 

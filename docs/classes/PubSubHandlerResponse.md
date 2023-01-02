@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/types.ts:50](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L50)
+[src/types.ts:50](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L50)

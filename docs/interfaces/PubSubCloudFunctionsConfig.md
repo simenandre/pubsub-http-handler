@@ -4,15 +4,14 @@
 
 ## Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 ## Hierarchy
 
-- `Omit`<[`PubSubConfig`](PubSubConfig.md)<`Data`, `Context`\>, `"handler"` \|
-  `"path"`\>
+- `Omit`<[`PubSubConfig`](PubSubConfig.md)<`Data`, `Context`\>, ``"handler"`` \| ``"path"``\>
 
   ↳ **`PubSubCloudFunctionsConfig`**
 
@@ -33,18 +32,18 @@
 
 #### Defined in
 
-[src/methods/cloud-functions.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/methods/cloud-functions.ts#L9)
+[src/methods/cloud-functions.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/cloud-functions.ts#L9)
 
----
+___
 
 ### onError
 
-• `Optional` **onError**:
-[`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
+• `Optional` **onError**: [`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
 
 OnError Handler
 
-When this is set, errors will not be thrown.
+When this is set, errors will not be
+thrown.
 
 #### Inherited from
 
@@ -52,9 +51,9 @@ Omit.onError
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L16)
+[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L16)
 
----
+___
 
 ### parseJson
 
@@ -74,9 +73,9 @@ Omit.parseJson
 
 #### Defined in
 
-[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L25)
+[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L25)
 
----
+___
 
 ### parser
 
@@ -88,8 +87,8 @@ Omit.parseJson
 
 ##### Parameters
 
-| Name   | Type      |
-| :----- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | `unknown` |
 
 ##### Returns
@@ -102,4 +101,4 @@ Omit.parser
 
 #### Defined in
 
-[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L18)
+[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L18)
