@@ -4,9 +4,9 @@
 
 ## Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 ## Table of contents
@@ -28,9 +28,9 @@
 
 #### Defined in
 
-[src/types.ts:70](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L70)
+[src/types.ts:70](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L70)
 
----
+___
 
 ### handler
 
@@ -38,9 +38,9 @@
 
 #### Defined in
 
-[src/types.ts:67](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L67)
+[src/types.ts:67](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L67)
 
----
+___
 
 ### log
 
@@ -48,9 +48,9 @@
 
 #### Defined in
 
-[src/types.ts:71](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L71)
+[src/types.ts:71](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L71)
 
----
+___
 
 ### message
 
@@ -58,17 +58,17 @@
 
 #### Type declaration
 
-| Name         | Type                                         |
-| :----------- | :------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `attributes` | `undefined` \| `Record`<`string`, `string`\> |
-| `data`       | `string`                                     |
-| `messageId`  | `undefined` \| `string`                      |
+| `data` | `string` |
+| `messageId` | `undefined` \| `string` |
 
 #### Defined in
 
-[src/types.ts:66](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L66)
+[src/types.ts:66](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L66)
 
----
+___
 
 ### parseJson
 
@@ -76,9 +76,9 @@
 
 #### Defined in
 
-[src/types.ts:68](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L68)
+[src/types.ts:68](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L68)
 
----
+___
 
 ### parser
 
@@ -90,8 +90,8 @@
 
 ##### Parameters
 
-| Name   | Type      |
-| :----- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | `unknown` |
 
 ##### Returns
@@ -100,4 +100,4 @@
 
 #### Defined in
 
-[src/types.ts:69](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L69)
+[src/types.ts:69](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L69)

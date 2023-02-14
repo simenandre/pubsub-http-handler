@@ -4,9 +4,9 @@
 
 ## Type parameters
 
-| Name      |
-| :-------- |
-| `Data`    |
+| Name |
+| :------ |
+| `Data` |
 | `Context` |
 
 ## Table of contents
@@ -29,24 +29,24 @@ Handler
 
 #### Defined in
 
-[src/types.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L9)
+[src/types.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L9)
 
----
+___
 
 ### onError
 
-• `Optional` **onError**:
-[`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
+• `Optional` **onError**: [`OnErrorHandler`](../README.md#onerrorhandler)<`Context`\>
 
 OnError Handler
 
-When this is set, errors will not be thrown.
+When this is set, errors will not be
+thrown.
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L16)
+[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L16)
 
----
+___
 
 ### parseJson
 
@@ -62,9 +62,9 @@ true
 
 #### Defined in
 
-[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L25)
+[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L25)
 
----
+___
 
 ### parser
 
@@ -76,8 +76,8 @@ true
 
 ##### Parameters
 
-| Name   | Type      |
-| :----- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `data` | `unknown` |
 
 ##### Returns
@@ -86,9 +86,9 @@ true
 
 #### Defined in
 
-[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L18)
+[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L18)
 
----
+___
 
 ### path
 
@@ -102,4 +102,4 @@ Use this to set a different path
 
 #### Defined in
 
-[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f2a1dfc/src/types.ts#L31)
+[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L31)
