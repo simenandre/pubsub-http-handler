@@ -2,13 +2,22 @@
   "name": "pubsub-http-handler",
   "version": "4.6.0",
   "description": "Handle Google PubSub requests with ease",
-  "repository": "github:cobraz/pubsub-http-handler",
+  "keywords": [
+    "google",
+    "app",
+    "cloud",
+    "cloud-run",
+    "run",
+    "pubsub",
+    "handler",
+    "fastify",
+    "fastify-plugin",
+    "cloud-functions"
+  ],
+  "repository": "github:simenandre/pubsub-http-handler",
   "license": "Apache-2.0",
   "author": "Simen A. W. Olsen <cobraz@cobraz.no>",
   "main": "dist/index.js",
-  "engines": {
-    "node": ">=16"
-  },
   "files": [
     "dist"
   ],
@@ -28,18 +37,7 @@
       "prettier --write"
     ]
   },
-  "keywords": [
-    "google",
-    "app",
-    "cloud",
-    "cloud-run",
-    "run",
-    "pubsub",
-    "handler",
-    "fastify",
-    "fastify-plugin",
-    "cloud-functions"
-  ],
+  "prettier": "@cobraz/prettier",
   "dependencies": {
     "@fastify/type-provider-typebox": "^2.0.0",
     "@sinclair/typebox": "^0.24.0",
@@ -49,7 +47,6 @@
     "pino": "^8.0.0",
     "pino-cloud-logging": "^1.0.3"
   },
-  "prettier": "@cobraz/prettier",
   "devDependencies": {
     "@bjerk/eslint-config": "^2.0.1",
     "@cobraz/prettier": "^2.0.0",
@@ -67,5 +64,8 @@
     "typedoc-plugin-markdown": "^3.1.1",
     "typescript": "^4.3",
     "zod": "^3.18.0"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
