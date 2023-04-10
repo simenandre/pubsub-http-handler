@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/methods/server.ts:36](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L36)
+[src/methods/server.ts:36](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L36)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[src/methods/server.ts:35](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L35)
+[src/methods/server.ts:35](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L35)

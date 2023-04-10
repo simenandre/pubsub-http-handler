@@ -29,7 +29,7 @@ Handler
 
 #### Defined in
 
-[src/types.ts:9](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L9)
+[src/types.ts:9](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L9)
 
 ___
 
@@ -44,7 +44,7 @@ thrown.
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L16)
+[src/types.ts:16](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L16)
 
 ___
 
@@ -62,7 +62,7 @@ true
 
 #### Defined in
 
-[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L25)
+[src/types.ts:25](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L25)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L18)
+[src/types.ts:18](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L18)
 
 ___
 
@@ -102,4 +102,4 @@ Use this to set a different path
 
 #### Defined in
 
-[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L31)
+[src/types.ts:31](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L31)

@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[src/methods/server.ts:26](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L26)
+[src/methods/server.ts:26](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L26)
 
 ___
 
@@ -56,7 +56,7 @@ Read more here: https://www.fastify.io/docs/latest/Server/
 
 #### Defined in
 
-[src/methods/server.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L31)
+[src/methods/server.ts:31](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L31)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[src/methods/server.ts:20](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L20)
+[src/methods/server.ts:20](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L20)
 
 ___
 
@@ -89,7 +89,7 @@ Omit.onError
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L16)
+[src/types.ts:16](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L16)
 
 ___
 
@@ -111,7 +111,7 @@ Omit.parseJson
 
 #### Defined in
 
-[src/types.ts:25](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L25)
+[src/types.ts:25](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L25)
 
 ___
 
@@ -139,7 +139,7 @@ Omit.parser
 
 #### Defined in
 
-[src/types.ts:18](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L18)
+[src/types.ts:18](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L18)
 
 ___
 
@@ -159,7 +159,7 @@ Omit.path
 
 #### Defined in
 
-[src/types.ts:31](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L31)
+[src/types.ts:31](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L31)
 
 ___
 
@@ -175,4 +175,4 @@ Will automatically pick up PORT environment variable.
 
 #### Defined in
 
-[src/methods/server.ts:15](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L15)
+[src/methods/server.ts:15](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L15)
