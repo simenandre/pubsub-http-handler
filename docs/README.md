@@ -60,7 +60,7 @@ pubsub-http-handler
 
 #### Defined in
 
-[src/methods/cloud-functions.ts:12](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/cloud-functions.ts#L12)
+[src/methods/cloud-functions.ts:12](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/cloud-functions.ts#L12)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:60](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L60)
+[src/types.ts:60](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L60)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:53](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L53)
+[src/types.ts:53](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L53)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:40](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L40)
+[src/types.ts:40](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L40)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:47](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L47)
+[src/types.ts:47](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L47)
 
 ## Variables
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:34](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L34)
+[src/types.ts:34](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L34)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:42](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/types.ts#L42)
+[src/types.ts:42](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/types.ts#L42)
 
 ## Functions
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/methods/cloud-functions.ts:17](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/cloud-functions.ts#L17)
+[src/methods/cloud-functions.ts:17](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/cloud-functions.ts#L17)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[src/methods/server.ts:39](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/methods/server.ts#L39)
+[src/methods/server.ts:39](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/methods/server.ts#L39)
 
 ___
 
@@ -248,7 +248,7 @@ ___
 
 #### Defined in
 
-[src/common.ts:5](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/common.ts#L5)
+[src/common.ts:5](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/common.ts#L5)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[src/utils.ts:3](https://github.com/cobraz/pubsub-http-handler/blob/f42c9f1/src/utils.ts#L3)
+[src/utils.ts:3](https://github.com/simenandre/pubsub-http-handler/blob/a2ca195/src/utils.ts#L3)
 
 ___
 
