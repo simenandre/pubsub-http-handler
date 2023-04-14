@@ -94,7 +94,7 @@ describe('fastify-plugin', () => {
     });
 
     expect(res.payload).toMatchInlineSnapshot(
-      `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"error\\"}"`,
+      `"{"statusCode":500,"error":"Internal Server Error","message":"error"}"`,
     );
   });
 
@@ -119,7 +119,7 @@ describe('fastify-plugin', () => {
     expect(parser).toHaveBeenCalled();
 
     expect(res.payload).toMatchInlineSnapshot(
-      `"{\\"statusCode\\":500,\\"error\\":\\"Internal Server Error\\",\\"message\\":\\"parsing fail\\"}"`,
+      `"{"statusCode":500,"error":"Internal Server Error","message":"parsing fail"}"`,
     );
   });
 
