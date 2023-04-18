@@ -10,7 +10,7 @@ describe('index', () => {
             "attributes": Object {
               "additionalProperties": false,
               "patternProperties": Object {
-                "^.*$": Object {
+                "^(.*)$": Object {
                   "type": "string",
                   Symbol(TypeBox.Kind): "String",
                 },
@@ -42,7 +42,7 @@ describe('index', () => {
                 "attributes": Object {
                   "additionalProperties": false,
                   "patternProperties": Object {
-                    "^.*$": Object {
+                    "^(.*)$": Object {
                       "type": "string",
                       Symbol(TypeBox.Kind): "String",
                     },
