@@ -1,7 +1,7 @@
-import { PubSubConfig } from './types';
+import { PubSubHandlerFastifyConfig } from './fastify-plugin';
 
 export const makePubSubConfig = <Data, Context>(
-  data: PubSubConfig<Data, Context>,
-): PubSubConfig<Data, Context> => {
+  data: PubSubHandlerFastifyConfig<Data, Context>,
+): PubSubHandlerFastifyConfig<Data, Context> => {
   return data;
 };

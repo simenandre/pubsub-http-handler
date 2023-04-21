@@ -1,12 +1,49 @@
 import { Static, Type } from '@fastify/type-provider-typebox';
-import { FastifyBaseLogger } from 'fastify';
-import pino from 'pino';
+
+/**
+ * PubSub Message Type
+ *
+ * This describes the message object that is sent to the handler
+ * from Google PubSub.
+ */
+export const pubSubMessageSchema = Type.Object({
+  attributes: Type.Optional(Type.Record(Type.String(), Type.String())),
+  data: Type.String(),
+  messageId: Type.Optional(Type.String()),
+});
+
+export type PubSubMessage = Static<typeof pubSubMessageSchema>;
+
+/**
+ * PubSub Request Type
+ *
+ * This describes the request object that is sent to the handler
+ * from Google PubSub.
+ */
+export const pubSubRequestSchema = Type.Object({
+  message: pubSubMessageSchema,
+  subscription: Type.String(),
+});
+
+export type PubSubRequest = Static<typeof pubSubRequestSchema>;
+
+export type OnErrorHandler<Context> = (
+  error: unknown,
+  context: Context,
+) => void | Promise<void>;
+
+export class PubSubHandlerResponse {
+  statusCode?: number;
+}
+
+export type PubSubHandler<Data, Context, Logger> = (args: {
+  message: PubSubMessage;
+  data: Data;
+  context: Context;
+  log: Logger;
+}) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
 
 export interface PubSubConfig<Data, Context> {
-  /**
-   * Handler
-   */
-  handler: PubSubHandler<Data, Context>;
   /**
    * OnError Handler
    *
@@ -16,6 +53,9 @@ export interface PubSubConfig<Data, Context> {
   onError?: OnErrorHandler<Context>;
 
   parser?: (data: unknown) => Data | Promise<Data>;
+
+  context?: () => Context | Promise<Context>;
+
   /**
    * This will run JSON.parse on request data
    *
@@ -29,44 +69,4 @@ export interface PubSubConfig<Data, Context> {
    * @default /
    */
   path?: string;
-}
-
-export const PubSubMessage = Type.Object({
-  attributes: Type.Optional(Type.Record(Type.String(), Type.String())),
-  data: Type.String(),
-  messageId: Type.Optional(Type.String()),
-});
-
-export type PubSubMessageType = Static<typeof PubSubMessage>;
-
-export const PubSubRequest = Type.Object({
-  message: PubSubMessage,
-  subscription: Type.String(),
-});
-
-export type PubSubRequestType = Static<typeof PubSubRequest>;
-
-export class PubSubHandlerResponse {
-  statusCode?: number;
-}
-
-export type PubSubHandler<Data, Context> = (args: {
-  message: PubSubMessageType;
-  data: Data;
-  context?: Context;
-  log: FastifyBaseLogger;
-}) => Promise<PubSubHandlerResponse | void> | PubSubHandlerResponse | void;
-
-export type OnErrorHandler<Context> = (
-  error: unknown,
-  context: Context,
-) => void | Promise<void>;
-
-export interface HandlePubSubMessageArgs<Data, Context> {
-  message: PubSubMessageType;
-  handler: PubSubHandler<Data, Context>;
-  parseJson?: boolean;
-  parser?: (data: unknown) => Data | Promise<Data>;
-  context: Context;
-  log?: pino.Logger | FastifyBaseLogger;
 }

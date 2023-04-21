@@ -1,4 +1,4 @@
-import { createPubSubCloudFunctions } from '../methods/cloud-functions';
+import { createPubSubCloudFunctions } from '../cloud-functions';
 import { createPubSubRequest } from './fixtures';
 import type * as express from 'express';
 
@@ -24,13 +24,18 @@ describe('cloud functions', () => {
     };
     const onError = jest.fn();
     const send = jest.fn();
-    const fun = createPubSubCloudFunctions(handle, { onError });
+    const fun = createPubSubCloudFunctions(handle, {
+      onError,
+      context: () => ({ hello: 'world' }),
+    });
     await fun(
       { body: payload } as any,
       { status: () => ({ send }) } as unknown as any,
     );
 
-    expect(onError).toHaveBeenCalledWith(new Error('error'), payload);
+    expect(onError).toHaveBeenCalledWith(new Error('error'), {
+      hello: 'world',
+    });
   });
 
   it('should throw when onError is undefined', async () => {
