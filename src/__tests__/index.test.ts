@@ -3,14 +3,14 @@ import * as pkg from '../index';
 describe('index', () => {
   it('should export all methods', () => {
     expect(pkg).toMatchInlineSnapshot(`
-      Object {
+      {
         "PubSubHandlerResponse": [Function],
-        "PubSubMessage": Object {
-          "properties": Object {
-            "attributes": Object {
+        "PubSubMessage": {
+          "properties": {
+            "attributes": {
               "additionalProperties": false,
-              "patternProperties": Object {
-                "^(.*)$": Object {
+              "patternProperties": {
+                "^(.*)$": {
                   "type": "string",
                   Symbol(TypeBox.Kind): "String",
                 },
@@ -19,30 +19,30 @@ describe('index', () => {
               Symbol(TypeBox.Modifier): "Optional",
               Symbol(TypeBox.Kind): "Record",
             },
-            "data": Object {
+            "data": {
               "type": "string",
               Symbol(TypeBox.Kind): "String",
             },
-            "messageId": Object {
+            "messageId": {
               "type": "string",
               Symbol(TypeBox.Modifier): "Optional",
               Symbol(TypeBox.Kind): "String",
             },
           },
-          "required": Array [
+          "required": [
             "data",
           ],
           "type": "object",
           Symbol(TypeBox.Kind): "Object",
         },
-        "PubSubRequest": Object {
-          "properties": Object {
-            "message": Object {
-              "properties": Object {
-                "attributes": Object {
+        "PubSubRequest": {
+          "properties": {
+            "message": {
+              "properties": {
+                "attributes": {
                   "additionalProperties": false,
-                  "patternProperties": Object {
-                    "^(.*)$": Object {
+                  "patternProperties": {
+                    "^(.*)$": {
                       "type": "string",
                       Symbol(TypeBox.Kind): "String",
                     },
@@ -51,28 +51,28 @@ describe('index', () => {
                   Symbol(TypeBox.Modifier): "Optional",
                   Symbol(TypeBox.Kind): "Record",
                 },
-                "data": Object {
+                "data": {
                   "type": "string",
                   Symbol(TypeBox.Kind): "String",
                 },
-                "messageId": Object {
+                "messageId": {
                   "type": "string",
                   Symbol(TypeBox.Modifier): "Optional",
                   Symbol(TypeBox.Kind): "String",
                 },
               },
-              "required": Array [
+              "required": [
                 "data",
               ],
               "type": "object",
               Symbol(TypeBox.Kind): "Object",
             },
-            "subscription": Object {
+            "subscription": {
               "type": "string",
               Symbol(TypeBox.Kind): "String",
             },
           },
-          "required": Array [
+          "required": [
             "message",
             "subscription",
           ],
