@@ -1,18 +1,18 @@
-import pino from 'pino';
-import { gcpLogOptions } from 'pino-cloud-logging';
-import { HandlePubSubMessageArgs, PubSubHandlerResponse } from './types';
+import { PubSubHandler, PubSubHandlerResponse, PubSubMessage } from './types';
 
-export async function handlePubSubMessage<Data, Context>(
-  args: HandlePubSubMessageArgs<Data, Context>,
+export interface HandlePubSubMessageArgs<Data, Context, Logger> {
+  message: PubSubMessage;
+  handler: PubSubHandler<Data, Context, Logger>;
+  parseJson?: boolean;
+  parser?: (data: unknown) => Data | Promise<Data>;
+  context: Context;
+  log: Logger;
+}
+
+export async function handlePubSubMessage<Data, Context, Logger>(
+  args: HandlePubSubMessageArgs<Data, Context, Logger>,
 ): Promise<PubSubHandlerResponse | void> {
-  const {
-    message,
-    parseJson = true,
-    parser,
-    handler,
-    context,
-    log = pino(gcpLogOptions()),
-  } = args;
+  const { message, parseJson = true, parser, handler, context, log } = args;
   const bufferString = Buffer.from(message.data, 'base64').toString().trim();
 
   let data = parseJson ? JSON.parse(bufferString) : bufferString;

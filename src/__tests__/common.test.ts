@@ -1,10 +1,12 @@
 import { handlePubSubMessage } from '../common';
-import jsf from 'json-schema-faker';
-import { PubSubMessage, PubSubMessageType } from '../types';
+import { JSONSchemaFaker } from 'json-schema-faker';
+import { PubSubMessage, pubSubMessageSchema } from '../types';
 import pino from 'pino';
 
-function createPubSubdata(input: unknown, stringify = true): PubSubMessageType {
-  const message = jsf.generate(PubSubMessage) as PubSubMessageType;
+function createPubSubdata(input: unknown, stringify = true): PubSubMessage {
+  const message = JSONSchemaFaker.generate(
+    pubSubMessageSchema,
+  ) as PubSubMessage;
   const data = Buffer.from(
     stringify ? JSON.stringify(input) : (input as string),
   ).toString('base64');

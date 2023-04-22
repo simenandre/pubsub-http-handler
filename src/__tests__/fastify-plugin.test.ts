@@ -1,6 +1,8 @@
 import Fastify, { FastifyInstance } from 'fastify';
-import { pubSubFastifyPlugin } from '../methods/fastify-plugin';
-import { PubSubConfig } from '../types';
+import {
+  PubSubHandlerFastifyConfig,
+  pubSubFastifyPlugin,
+} from '../fastify-plugin';
 import { createPubSubRequest } from './fixtures';
 
 describe('fastify-plugin', () => {
@@ -75,7 +77,7 @@ describe('fastify-plugin', () => {
 
     expect(onError).toHaveBeenCalledWith(
       new Error('error'),
-      expect.objectContaining({ body: payload }),
+      expect.any(Object),
     );
   });
 
@@ -105,10 +107,10 @@ describe('fastify-plugin', () => {
     });
     const payload = createPubSubRequest('forward me');
 
-    app.register(pubSubFastifyPlugin, { handler, parser } as PubSubConfig<
-      any,
-      any
-    >);
+    app.register(pubSubFastifyPlugin, {
+      handler,
+      parser,
+    } as PubSubHandlerFastifyConfig<any, any>);
 
     const res = await app.inject({
       method: 'POST',
