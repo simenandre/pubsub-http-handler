@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.0](https://www.github.com/simenandre/pubsub-http-handler/compare/v4.6.0...v5.0.0) (2023-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove createPubSubServer (#255)
+* use `@sinclair/typebox` via `@fastify/type-provider-typebox` (#247)
+
+### Bug Fixes
+
+* use `@sinclair/typebox` via `@fastify/type-provider-typebox` ([#247](https://www.github.com/simenandre/pubsub-http-handler/issues/247)) ([180dfe7](https://www.github.com/simenandre/pubsub-http-handler/commit/180dfe71ebf4f0576d5f48c2124b0daa7c44c140))
+
+
+### Code Refactoring
+
+* Remove createPubSubServer ([#255](https://www.github.com/simenandre/pubsub-http-handler/issues/255)) ([25da846](https://www.github.com/simenandre/pubsub-http-handler/commit/25da8466d000661bb8fc712ef4033cd53fdcfab2))
+
 ## [4.6.0](https://www.github.com/cobraz/pubsub-http-handler/compare/v4.5.1...v4.6.0) (2022-12-31)
 
 
