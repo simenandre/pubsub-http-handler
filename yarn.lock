@@ -299,10 +299,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bjerk/eslint-config@^2.0.1":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@bjerk/eslint-config/-/eslint-config-2.2.2.tgz#26603d09e14ee72b7a72b1f9fd76382a59fbd57d"
-  integrity sha512-ZQoYWnLlC1SIc9GYwFGGUP3h1MkQDGAyBfE8vnLFL+xxlJX4q/qRugtha54HryUs+kCDjzuPwSG3s0gZ1tWPVQ==
+"@bjerk/eslint-config@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@bjerk/eslint-config/-/eslint-config-4.0.0.tgz#4fcbf9b108409e374b6895b1be2af51bb6b049f2"
+  integrity sha512-xcoaQg4Y3zquJEEen9df5vh1VOHp6kOJqP0Obw0Z2UiH02runHMJ22xxnhBV3A/98jE8iTyhQWHz3A0GifFtwA==
 
 "@cobraz/prettier@^2.0.0":
   version "2.0.1"
