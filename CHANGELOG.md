@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.0](https://www.github.com/simenandre/pubsub-http-handler/compare/v5.0.0...v5.1.0) (2023-05-08)
+
+
+### Features
+
+* upgrade @fastify/type-provider-typebox ([#267](https://www.github.com/simenandre/pubsub-http-handler/issues/267)) ([a9f09c1](https://www.github.com/simenandre/pubsub-http-handler/commit/a9f09c139b1030ca25050b4b3fac13afe95fcf98))
+
 ## [5.0.0](https://www.github.com/simenandre/pubsub-http-handler/compare/v4.6.0...v5.0.0) (2023-04-22)
 
 
