@@ -20,8 +20,3 @@ jobs:
       - run: yarn run test
       - run: yarn run build
       - uses: codecov/codecov-action@v3
-
-      - if: ${{ steps.release.outputs.release_created }}
-        run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
