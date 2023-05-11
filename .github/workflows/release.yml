@@ -24,7 +24,6 @@ jobs:
       - name: Build 🔨
         run: yarn build
 
-      - name: Publish 🚀
-        run: yarn publish
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: simenandre/publish-with-yarn-classic@v1
+        with:
+          npm-auth-token: ${{ secrets.NPM_TOKEN }}
