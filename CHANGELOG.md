@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.0](https://github.com/simenandre/pubsub-http-handler/compare/v5.1.0...v6.0.0) (2023-07-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade typebox ([#298](https://github.com/simenandre/pubsub-http-handler/issues/298))
+
+### Bug Fixes
+
+* upgrade typebox ([#298](https://github.com/simenandre/pubsub-http-handler/issues/298)) ([52ec586](https://github.com/simenandre/pubsub-http-handler/commit/52ec5868a482269caad9eda597f34be3b8d5333f))
+
 ## [5.1.0](https://www.github.com/simenandre/pubsub-http-handler/compare/v5.0.0...v5.1.0) (2023-05-08)
 
 
