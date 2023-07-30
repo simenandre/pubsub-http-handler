@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint '**/*.ts' --fix",
-    "generate:docs": "typedoc --gitRevision main --readme none --out docs src",
+    "generate:docs": "typedoc --gitRevision main --plugin typedoc-plugin-markdown --readme none --out docs src",
     "test": "jest --coverage src",
     "prepare": "husky install"
   },
