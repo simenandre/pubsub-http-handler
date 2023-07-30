@@ -14,7 +14,7 @@ const inputData = z.object({
 const server = () => {
   const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
-  fastify.register(
+  void fastify.register(
     pubSubFastifyPlugin,
     makePubSubConfig({
       parser: d => inputData.parse(d),

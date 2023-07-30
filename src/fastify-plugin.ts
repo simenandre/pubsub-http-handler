@@ -42,7 +42,7 @@ const pubSubFastifyPluginFn = async <Data, Context>(
           },
         );
 
-        return reply.code(res?.statusCode || 204).send();
+        return reply.code(res?.statusCode ?? 204).send();
       } catch (error) {
         if (onError) {
           await onError(error, context);
