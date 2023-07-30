@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['@bjerk/eslint-config', 'plugin:jest/recommended'],
   plugins: ['jest'],
+  ignorePatterns: ['dist', 'node_modules'],
   overrides: [
     {
       files: 'jest.config.*',
@@ -10,7 +11,8 @@ module.exports = {
     },
   ],
   parserOptions: {
-    project: true,
+    project: './tsconfig.eslint.json',
+
     tsconfigRootDir: __dirname,
   },
 };
