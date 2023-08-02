@@ -369,10 +369,10 @@
   dependencies:
     fast-json-stringify "^5.7.0"
 
-"@fastify/type-provider-typebox@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-3.3.0.tgz#898c1a5fafef0f52550ff6c8d77c4e0b2fb97c6d"
-  integrity sha512-CJ4bhrx2FurljP7zIR1pIGlSzf3ChSm65p5MyKUR74CT4Ft5gcqrZg6FNq4mOCtMegmgUL7Z0Ly762aIHp5ZWw==
+"@fastify/type-provider-typebox@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@fastify/type-provider-typebox/-/type-provider-typebox-3.4.0.tgz#9a5ce55fed9a5d4bb89b9860c215c3fc881f6496"
+  integrity sha512-wy1ihi8WtH00sW4YlaA0lZ0nIz/mVVh4stQQ68AtNYTgXI9LPKWylNYDTP2lcXO9az9w902CvqRc8BBwOUTo7w==
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
@@ -664,10 +664,10 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
-"@sinclair/typebox@^0.29.4":
-  version "0.29.6"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.29.6.tgz#4cd8372f9247372edd5fc5af44f67e2032c46e2f"
-  integrity sha512-aX5IFYWlMa7tQ8xZr3b2gtVReCvg7f3LEhjir/JAjX2bJCMVJA5tIPv30wTD4KDfcwMd7DDYY3hFDeGmOgtrZQ==
+"@sinclair/typebox@^0.30.0":
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.30.1.tgz#e34963817dad11a39f18f704c533d3a641639fdf"
+  integrity sha512-gEhL8rDxir3+Q0uYMeT9rQgp1g9YazEphp4tBdc10e0zMm/0pT3G1FlLHyN1DMZUI4Vk6nebZvtt1evB0nXdiw==
 
 "@sinonjs/commons@^3.0.0":
   version "3.0.0"
