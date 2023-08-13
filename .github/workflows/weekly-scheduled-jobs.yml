@@ -19,7 +19,7 @@ jobs:
 
       - run: yarn install
 
-      - name: Run typegen
+      - name: Run generate docs
         run: yarn run generate:docs
 
       - name: Create Pull Request
