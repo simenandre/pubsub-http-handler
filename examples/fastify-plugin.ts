@@ -11,10 +11,10 @@ const inputData = z.object({
   bookingId: z.string(),
 });
 
-const server = () => {
+const server = async () => {
   const fastify = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
-  void fastify.register(
+  await fastify.register(
     pubSubFastifyPlugin,
     makePubSubConfig({
       parser: d => inputData.parse(d),
@@ -30,4 +30,4 @@ const server = () => {
   fastify.server.listen(8000);
 };
 
-server();
+void server();
