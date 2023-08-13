@@ -15,7 +15,7 @@ export async function handlePubSubMessage<Data, Context, Logger>(
   const { message, parseJson = true, parser, handler, context, log } = args;
   const bufferString = Buffer.from(message.data, 'base64').toString().trim();
 
-  let data = parseJson ? JSON.parse(bufferString) : bufferString;
+  let data = (parseJson ? JSON.parse(bufferString) : bufferString) as Data;
 
   if (parser) {
     data = await parser(data);

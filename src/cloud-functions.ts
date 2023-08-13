@@ -2,17 +2,25 @@ import type * as express from 'express';
 import pino from 'pino';
 import { gcpLogOptions } from 'pino-cloud-logging';
 import { handlePubSubMessage } from './common';
-import { PubSubConfig, PubSubHandler } from './types';
+import { PubSubConfig, PubSubHandler, PubSubMessage } from './types';
+
+export type CloudRunRequest = express.Request<
+  unknown,
+  unknown,
+  {
+    message: PubSubMessage;
+  }
+>;
 
 export interface PubSubCloudFunctionsConfig<Data, Context>
   extends PubSubConfig<Data, Context> {
   logger?: pino.LoggerOptions;
 
-  context?: (req?: express.Request) => Context | Promise<Context>;
+  context?: (req?: CloudRunRequest) => Context | Promise<Context>;
 }
 
 export type CloudFunctionFun = (
-  req: express.Request,
+  req: CloudRunRequest,
   res: express.Response,
 ) => Promise<void>;
 
