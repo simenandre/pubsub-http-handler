@@ -22,7 +22,7 @@ const pubSubFastifyPluginFn = async <Data, Context>(
     {
       schema: {
         body: pubSubRequestSchema,
-        response: { 204: {} },
+        response: {} as Record<number, unknown>,
       },
     },
     async (req, reply) => {
@@ -31,10 +31,12 @@ const pubSubFastifyPluginFn = async <Data, Context>(
         : ({ req } as Context);
 
       try {
+        // Type assertion to satisfy TypeScript and avoid unsafe assignment
+        const body = req.body as (typeof pubSubRequestSchema)['static'];
         const res = await handlePubSubMessage<Data, Context, FastifyBaseLogger>(
           {
             parser,
-            message: req.body.message,
+            message: body.message,
             handler,
             parseJson,
             context,
@@ -57,5 +59,5 @@ const pubSubFastifyPluginFn = async <Data, Context>(
 
 export const pubSubFastifyPlugin = fp(pubSubFastifyPluginFn, {
   name: 'pubsub-http-handler',
-  fastify: '4.x',
+  fastify: '5.x',
 });
