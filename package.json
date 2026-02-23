@@ -1,6 +1,6 @@
 {
   "name": "pubsub-http-handler",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "description": "Handle Google PubSub requests with ease",
   "keywords": [
     "google",

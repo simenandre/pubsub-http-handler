@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.0](https://github.com/simenandre/pubsub-http-handler/compare/v6.0.0...v6.1.0) (2026-02-23)
+
 ## [6.0.0](https://github.com/simenandre/pubsub-http-handler/compare/v5.1.0...v6.0.0) (2023-07-13)
 
 
