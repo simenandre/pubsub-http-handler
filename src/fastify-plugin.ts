@@ -22,7 +22,7 @@ const pubSubFastifyPluginFn = async <Data, Context>(
     {
       schema: {
         body: pubSubRequestSchema,
-        response: {} as Record<number, unknown>,
+        response: { '204': {} },
       },
     },
     async (req, reply) => {
