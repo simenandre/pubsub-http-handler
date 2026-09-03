@@ -48,7 +48,7 @@
   "devDependencies": {
     "@bjerk/eslint-config": "^5.4.0",
     "@simenandre/prettier": "^5.0.0",
-    "@tsconfig/node16": "^1.0.3",
+    "@tsconfig/node18": "^18.2.0",
     "@types/jest": "^29.5.0",
     "@types/json-schema-faker": "^0.5.1",
     "@types/node": "^16",
